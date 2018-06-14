@@ -1,0 +1,84 @@
+<view class='page'>
+  <!--用户个人信息 start  -->
+  {{itAuth}}
+  <view wx:if='{{isAuth}}' class='weui-flex user_info'>
+    <!--授权登录状态  -->
+    <view>
+      <image class='user_logo' src='{{userInfo.headimgurl}}'></image>
+    </view>
+    <view class='weui-flex__item middle_box'>
+      <view class="weui-media-box__title">{{userInfo.nickname}}</view>
+      <view class="weui-media-box__desc">{{userInfo.province}}省{{userInfo.city}}市</view>
+    </view>
+  </view>
+  <!--未授权显示未登录  -->
+  <button wx:else open-type='getUserInfo' lang='zh_CN' bindgetuserinfo='authUserInfo' class='login-button' type="default">
+    未登录！
+  </button>
+  <!--用户个人信息 end  -->
+  <!--菜单列表  -->
+  <view class="menu_list">
+    <view class="weui-media-box weui-media-box_small-appmsg">
+      <view class="weui-cells weui-cells_in-small-appmsg">
+        <!--账户余额 start  -->
+         <!-- <navigator class='account' url="/pages/account/account" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/public/images/my/balance.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>账户余额</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>  -->
+        <!--账户余额 end  -->
+        <!--我的订单 start  -->
+        <navigator url="/pages/order/order" class="weui-cell weui-cell_access my_order" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/public/images/my/order.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>我的订单</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <!--我的订单 end  -->
+        <!--收件地址 start  -->
+        <navigator url="/pages/address/address" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/public/images/my/address.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>收件地址</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <!--收件地址 end  -->
+
+
+        <!--绑定手机号 start  -->
+        <view bindtap='bindphone' class="weui-cell weui-cell_access bind_phone" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/public/images/my/mobile.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>绑定手机号</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+        <!--绑定手机号 end  -->
+
+        <!--系统通知 start  -->
+        <navigator url="/pages/notice/notice" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="/public/images/my/notice.png" />
+          </view>
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>系统通知</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <!--系统通知 end  -->
+      </view>
+    </view>
+  </view>
+</view>

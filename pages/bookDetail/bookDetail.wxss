@@ -1,0 +1,98 @@
+/*图书详情  */
+
+/*顶部图书信息  */
+
+.top_box {
+  text-align: center;
+}
+
+.top_box .user_logo {
+  width: 100px;
+  height: 120px;
+}
+
+.top_box .user_address {
+  color: #999;
+  font-size: 14px;
+}
+
+.collect_count {
+  font-size: 14px;
+  color: #6acc48;
+  vertical-align:middle;
+}
+
+.collect_image {
+  width: 18px;
+  height: 18px;
+  vertical-align:middle;
+}
+
+/*简介  */
+.weui-navbar {
+  background: #FFFFFF;
+}
+.weui-navbar__slider {
+  width: 6em;
+}
+.introduction {
+  font-size: 14px;
+  color: #5E5E5E;
+  padding: 25px; 
+}
+
+/*流转  */
+
+.page {
+  font-size: 13px;
+}
+.notice {
+  position: relative;
+  margin: 10px 25px;
+}
+.notice_null {
+  text-align: center;
+}
+.notice .round{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 1px;
+}
+.notice .userLogo {
+  width: 40px;
+  height: 40px;
+
+}
+.notice .date {
+  margin-left: 25px;
+}
+
+.content {
+  margin:5px 25px;
+  background-color:#ffffff;
+  border-radius: 5px;
+  position: relative;
+}
+.content .visit {
+  display: inline;
+  position: absolute;
+  top: 10px;
+  margin-left: 13px;
+}
+
+/*底部按钮  */
+
+.footer_btn_box {
+  border-top: 1px solid #F7F7F7;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 5px;
+}
+
+.footer_btn {
+  margin:0 15px;
+}

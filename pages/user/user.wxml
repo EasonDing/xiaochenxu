@@ -1,0 +1,65 @@
+<!--个人主页  -->
+<view class='user'>
+  <!--顶部个人信息 start  -->
+  <view class='top_box'>
+    <image class='user_logo' src="{{userInfo.UserLogo}}"></image>
+    <view class='username'>{{userInfo.UserName}}</view>
+    <view class='user_address'>{{userInfo.City}}</view>
+    <!-- <view>
+      <text class='user_books'>他的书架：{{bookCount}}</text>
+      <text class='user_bars'>加入书吧：3</text>
+    </view> -->
+  </view>
+  <!--顶部个人信息 end  -->
+
+  <!--访客列表 start -->
+  <navigator url='/pages/callerList/callerList?selectId={{userInfo.UserId}}' class="weui-cell weui-cell_access weui-cell_link user_list">
+    <image class='user_logo' wx:for='{{visitUserList}}' wx:key='{{item.id}}' src='{{item.UserLogo}}'></image>
+    <view class="weui-cell__ft weui-cell__ft_in-access user_count">{{visitUserCount}}位访客</view>
+  </navigator>
+  <!--访客列表 end  -->
+
+  <!--个人收藏图书 start  -->
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="/public/images/ta_book.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">TA的书架</view>
+  </navigator>
+
+  <view hidden='{{bookList.length > 0}}' class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">他还未收藏图书哦！</view>
+    </view>
+
+  <scroll-view>
+    <view class="weui-tab__content">
+      <view class="weui-panel__bd">
+        <navigator wx:for='{{bookList}}' wx:key='{{item.id}}' url="" class="weui-media-box weui-media-box_appmsg books" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd books_img">
+            <image class="weui-media-box__thumb" src="{{item.BookPic}}" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg book_detail">
+            <view class="weui-media-box__title">{{item.BookName}}</view>
+            <view class="weui-media-box__desc">
+              <text>{{item.author}}</text>
+            </view>
+            <view class="weui-media-box__desc">
+              <text>{{item.summary}}</text>
+            </view>
+            <view class="weui-media-box__desc book_detail_foot">
+              <view class='book_money'>{{item.price}}</view>
+            </view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!--个人收藏图书 end  -->
+
+  <!--底部加好友 start  -->
+   <view style='height:60px;'></view>
+  <view wx:if='{{!btnIsShow}}' class='footer_btn_box'>
+    <button bindtap='addApply' class="weui-btn footer_btn" type="primary" plain="true">加好友</button>
+  </view> 
+  <!--底部加好友 end  -->
+</view>

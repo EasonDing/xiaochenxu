@@ -1,0 +1,161 @@
+<view>
+  <!--书吧信息  -->
+  <view class="weui-panel__bd">
+    <view class="weui-media-box weui-media-box_appmsg">
+      <view class="weui-media-box__hd group_logo_box">
+        <image class="weui-media-box__thumb" src="{{groupInfo.groupLogo}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{groupInfo.groupName}}</view>
+        <view class="weui-media-box__desc">
+          <text>人数：{{memberCount}}人</text>
+          <text>书籍：10本</text>
+        </view>
+      </view>
+    </view>
+
+    <!--书吧用户 start -->
+    <navigator url='/pages/barUserList/barUserList?groupId={{groupInfo.groupid}}' class="weui-cell weui-cell_access weui-cell_link user_list">
+      <image class='user_logo' wx:for='{{groupUserPart}}' wx:key='{{item.id}}' src='{{item.UserLogo}}'></image>
+      <view class="weui-cell__ft weui-cell__ft_in-access user_count">{{memberCount}}位书友</view>
+    </navigator>
+    <!--书吧用户 end  -->
+
+  </view>
+  <!--navBar 导航-->
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+     <!--加入书吧按钮 start  -->
+          <!-- <view>
+            <button hidden='{{isJoinGroup}}' bindtap='joinGroup' class="weui-btn footer_btn" type="primary" plain="true">加入书吧</button>
+          </view> -->
+        <!--加入书吧按钮 end  -->
+      <!-- 专栏列表 start -->
+      <view class="weui-tab__content columnList" hidden="{{activeIndex != 0}}">
+        <view class="weui-panel__bd">
+          <navigator wx:for='{{columnList}}' wx:key='{{item.id}}' url="/pages/column/column?columnId={{item.columnId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd column_img">
+              <image class="weui-media-box__thumb" src="{{item.image}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.subtitle}}</view>
+              <view class="weui-media-box__desc">
+                <text>{{item.content}}</text>
+              </view>
+              <view class="weui-media-box__desc column_detail_foot">
+                <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                  <view class="weui-cell__bd weui-cell_primary">
+                    <view>{{item.updateTime}}</view>
+                  </view>
+                  <view class="weui-cell__ft">
+                    <!-- <image src='/public/images/comment.png'></image>
+                    <text>{{item.allComment}}</text> -->
+                    <view class="weui-flex comment_count">
+                      <view class='weui-flex__item'></view>
+                      <image src='/public/images/comment.png'></image>
+                      <text>{{item.allComment}}</text>
+                    </view>
+                  </view>
+                </navigator>
+              </view>
+            </view>
+          </navigator>
+        </view>
+
+        <!--专栏为空时  -->
+        <view class='null' hidden='{{columnList.length > 0}}'>
+          <image class='null_img' src='/public/images/null/column_null.png'></image>
+          <view class='null_text'>无专栏信息</view>
+        </view>
+      </view>
+      <!-- 专栏列表 end -->
+      <!--书吧书架 start -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class="weui-panel__bd">
+          <navigator wx:for='{{bookList}}' wx:key='{{item.id}}' url="/pages/bookShelf/bookShelf?code={{item.CODE}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd books_img">
+              <image class="weui-media-box__thumb" src="{{item.Logo}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg book_detail">
+              <view class="weui-media-box__title">{{item.Name}}</view>
+              <view class="weui-media-box__desc">
+                <text>{{item.author}}</text>
+              </view>
+              <view class="weui-media-box__desc">
+                <text>{{item.introduce}}</text>
+              </view>
+              <view class="weui-media-box__desc book_detail_foot">
+                <view class='book_money'>{{item.Price}}</view>
+              </view>
+            </view>
+          </navigator>
+        </view>  
+        <!--书架为空时  -->
+          <view class='null' hidden='{{columnList.length > 0}}'>
+          <image class='null_img' src='/public/images/null/book_null.png'></image>
+          <view class='null_text'>书架空空如也</view>
+        </view>
+      </view>  
+      <!--书吧书架 end -->
+
+      <!--贴吧列表 start -->
+       <view class="weui-tab__content" hidden="{{activeIndex != 2}}"> 
+         <navigator url='/pages/blog/blog?blogId={{item.blogId}}' wx:for='{{blogList}}' wx:key='item.id'> 
+          <!--发帖人信息 start  -->
+           <view class="weui-media-box weui-media-box_appmsg">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg user_logo_box">
+              <image class="weui-media-box__thumb" src="{{item.userLogo}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+              <view class="weui-media-box__title">{{item.userName}}</view>
+            </view>
+            <view class="weui-media-box__desc">{{item.updateTime}}</view>
+          </view> 
+          <!--发帖人信息 end  -->
+
+          <!--帖子图片及内容 start  -->
+           <view class="weui-flex content_box">
+            <view class='blank'></view>
+            <view class="weui-flex__item">
+              <text class='blog_content'>{{item.content}}</text>
+            </view>
+          </view>
+          <view class="weui-flex content_box">
+            <view class='blank'></view>
+            <view class="weui-flex__item">
+              <view class="weui-flex">
+                <image wx:for='{{item.reAlbumList}}' wx:key='{{item.id}}' class="weui-flex__item top_blog_image" src='{{item.photoURL}}'></image>
+              </view>
+            </view>
+          </view>
+          <view class="weui-flex comment_count">
+            <view class='weui-flex__item'></view>
+            <image src='/public/images/comment.png'></image>
+            <text>{{item.commentCount}}</text>
+          </view>
+        </navigator> 
+
+        <!--发布帖子 start  -->
+         <navigator url="/pages/blogCreate/blogCreate?groupId={{groupInfo.groupid}}" class="add_blog">
+          <image src='/public/images/edit.png'></image>
+        </navigator> 
+        <!--发布帖子 end  -->
+
+        <!--帖子为空时  -->
+         <view class='null' hidden='{{columnList.length > 0}}'>
+          <image class='null_img' src='/public/images/null/column_null.png'></image>
+          <view class='null_text'>无帖子信息</view>
+        </view>
+      </view> 
+      <!--贴吧列表 end -->
+    </view>
+  </view>
+</view>

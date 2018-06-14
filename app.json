@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/bookBar/bookBar",
+    "pages/column/column",
+    "pages/blog/blog",
+    "pages/blogCreate/blogCreate",
+    "pages/bookShelf/bookShelf",
+    "pages/barUserList/barUserList",
+    "pages/user/user",
+    "pages/callerList/callerList",
+    "pages/buyBook/buyBook",
+    "pages/lottery/lottery",
+    "pages/lotteryDetail/lotteryDetail",
+    "pages/lotteryBookDetail/lotteryBookDetail",
+    "pages/lotteryInvite/lotteryInvite",
+    "pages/lotteryBuyBook/lotteryBuyBook",
+    "pages/lotteryInviteDetail/lotteryInviteDetail",
+    "pages/bindPhone/bindPhone",
+
+    "pages/books/books",
+    "pages/bookDetail/bookDetail",
+    "pages/bookForISBN/bookForISBN",
+    "pages/collectList/collectList",
+    "pages/bookMarket/bookMarket",
+    
+    "pages/bookFriends/bookFriends",
+
+    "pages/my/my",
+    "pages/account/account",
+    "pages/recharge/recharge",
+    "pages/order/order",
+    "pages/orderDetail/orderDetail",
+    "pages/address/address",
+    "pages/addressEdit/addressEdit",
+    "pages/bindMobile/bindMobile",
+    "pages/bindMobileSuccess/bindMobileSuccess",
+    "pages/notice/notice",
+    "pages/noticeDetail/noticeDetail",
+    "pages/userEdit/userEdit"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#67C737",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "public/images/tabBar/index.png",
+        "selectedIconPath": "public/images/tabBar/index_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/books/books",
+        "iconPath": "public/images/tabBar/books.png",
+        "selectedIconPath": "public/images/tabBar/books_select.png",
+        "text": "书架"
+      },
+      {
+        "pagePath": "pages/bookFriends/bookFriends",
+        "iconPath": "public/images/tabBar/friends.png",
+        "selectedIconPath": "public/images/tabBar/friends_select.png",
+        "text": "书友"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "public/images/tabBar/my.png",
+        "selectedIconPath": "public/images/tabBar/my_select.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

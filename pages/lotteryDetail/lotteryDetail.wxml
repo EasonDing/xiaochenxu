@@ -1,0 +1,60 @@
+<!--一元抽奖详情页  -->
+<view class='page'>
+  <!--图书详情 start  -->
+  <view class='top'>
+    <view class="weui-media-box weui-media-box_appmsg">
+      <view class="weui-media-box__hd books_img">
+        <image class="weui-media-box__thumb" src="{{orderDetail.buy_book.image}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg book_detail">
+        <view class="weui-media-box__title">
+          <text class='book_name'>{{orderDetail.buy_book.title}}</text>
+        </view>
+        <view class="weui-media-box__desc">
+          <text>作者：{{orderDetail.buy_book.author}}</text>
+        </view>
+        <view class="weui-media-box__desc introduction">
+          <text>{{orderDetail.buy_book.introduction}}</text>
+        </view>
+        <view class='weui-flex footer'>
+          <view>
+            <text class='book_money'>{{orderDetail.real_price}}元</text>
+          </view>
+          <view>
+            <text class='original_price'>原价:{{orderDetail.buy_book.price}}元</text>
+          </view>
+          <view class='weui-flex__item date'>
+            剩余时间:{{wxTimer}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--图书详情 end  -->
+
+  <!--受邀请好友列表 start  -->
+  <view class='middle'>
+    <view class='title_box'>
+      <view class='title'>还需要{{orderDetail.surplus_invite}}名好友支持</view>
+      <view>需要{{orderDetail.surplus_invite}}名新用户好友支持</view>
+    </view>
+    <view class='user_logo_list'>
+      <image class='user_logo' wx:for='{{orderDetail.buy_invite}}' wx:key='{{item.id}}' src='{{item}}'></image>
+    </view>
+  </view>
+  <!--受邀请好友列表 end  -->
+
+  <!--图书简介 start  -->
+  <view class='book'>
+    <!-- <view class='title'>图书简介</view> -->
+    <!-- <image src='{{orderDetail.buy_book.image}}'></image> -->
+  </view>
+  <!--图书简介 end  -->
+
+
+  <!--底部邀请好友按钮 start  -->
+  <view class='footer_btn_box'>
+    <button wx:if='{{orderDetail.activity_status == 0}}' open-type="share" class="weui-btn footer_btn" type="primary" plain="true">邀请好友</button>
+  </view>
+  <!--底部邀请好友按钮 end  -->
+</view>

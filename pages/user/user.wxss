@@ -1,0 +1,91 @@
+/*个人主页  */
+
+/*顶部个人信息  */
+
+.top_box {
+  text-align: center;
+}
+
+.top_box .user_logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  border: 2px solid #68c946;
+}
+
+.top_box .user_address {
+  color: #999;
+  font-size: 14px;
+}
+
+.top_box .user_books {
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+.top_box .user_bars {
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+/*访客列表  */
+
+.weui-cell:before {
+  border: 0;
+}
+
+.user_list {
+  border-bottom: 10px solid #f8f8f8;
+  margin: 5px 0;
+  height: 40px;
+  position: relative;
+}
+
+.user_list .user_logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.user_list .user_count {
+  position: absolute;
+  right: 15px;
+}
+
+/*书架列表  */
+
+.books {
+  padding: 5px 15px;
+}
+
+.books_img {
+  margin-right: 0.8em;
+  width: 90px;
+  height: 110px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.book_detail view {
+  margin-top: 8rpx;
+}
+
+.book_money {
+  color: orange;
+}
+
+/*加好友  */
+
+.footer_btn_box {
+  border-top: 1px solid #F7F7F7;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 5px;
+}
+
+.footer_btn {
+  margin:0 15px;
+}

@@ -1,0 +1,39 @@
+/* pages/bindMobile/bindMobile.wxss */
+.page {
+  padding: 0 15px;
+  background-color: #eee;
+  height: 100vh;
+  padding-top: 5%;
+}
+.bindPhone {
+  border-radius: 3px;
+  line-height: 25%;
+}
+.weui-label {
+  width: 80px;
+}
+.getCode {
+  padding: 5px;
+  font-size: 14px;
+  line-height: 2em;
+  margin-right: 5px;
+}
+.weui-cell::before {
+  border: 0;
+}
+.weui-cells:before {
+  border: 0;
+}
+.weui-input:before {
+  border: 0;
+}
+.weui-cells:after {
+  border: 0;
+}
+
+.foot_text {
+  text-indent: 1em;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #999;
+}

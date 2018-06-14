@@ -1,0 +1,32 @@
+<!--pages/lotteryInviteDetail/lotteryInviteDetail.wxml-->
+<view class='page'>
+  <view class='top'>
+    <view>
+      <image class='bookfan_logo' src='/public/images/bookfan.png'></image>
+      <text class='bookfan_name'>贝壳书友会</text>
+    </view>
+    <view class='user_info'>
+      <image class='user_logo' src='{{userInfo.headimgurl}}'></image>
+      <view class='user_name'>{{userInfo.nickname}}</view>
+      <view class='title'>邀请您加入贝壳书友会,</view>
+      <view class='title'>让我们在书中相遇！</view>
+    </view>
+  </view>
+
+  <view class='middle'>
+    <button wx:if='{{btnStatus === 1}}' bindtap='help' class='help'>助好友一臂之力</button>
+    <button wx:if='{{btnStatus === 0}}' bindtap='jump' class='help'>进入贝壳书友会</button>
+  </view>
+
+  <view class='footer'>
+    <view class='footer_top'>
+      <view class='invite_count'>已邀请{{inviteCount}}人</view>
+      <view class='invite_title'>TA邀请的好友</view>
+    </view>
+    <view class='invite_users'>
+      <view class='user_box' wx:for='{{inviteUsers}}' wx:key='{{item.id}}'>
+        <image class='invite_user_logo' src='{{item}}'></image>
+      </view>
+    </view>
+  </view>
+</view>

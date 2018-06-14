@@ -1,0 +1,58 @@
+<!--订单详情  -->
+<view class='page'>
+  <!--顶部 start  -->
+  <view class="icon-box top">
+    <icon wx:if='{{order.orderStatus == 3}}' type="success" size="35"></icon>
+    <icon wx:else type='waiting' size="35"></icon>
+    <view class="icon-box__ctn">
+      <view class="icon-box__title">{{order.orderStatus ==3 ? '交易完成' : '待完成'}}</view>
+    </view>
+  </view>
+  <!--顶部 end  -->
+
+  <!--地址 start  -->
+  <view class='weui-flex address_box'>
+    <image class='icon' src='/public/images/my/address.png'></image>
+    <view class='weui-flex__item'>
+      <view class='user_info'>
+        <text>{{order.name}}</text>
+        <text>{{order.tel}}</text>
+      </view>
+      <view class='address'>{{order.address}}</view>
+    </view>
+  </view>
+  <!--地址 end  -->
+
+  <!--订单详情 start  -->
+  <navigator url="/pages/user/user?SelectId={{order.sellerUserId}}" class="user weui-flex" hover-class="weui-cell_active">
+    <image class='user_logo' src='{{order.sellerUserLogo}}'></image>
+    <view class='weui-flex__item'>{{order.sellerUserName}}</view>
+    <image class='arrow_right' src='/public/images/arrow_right.png'></image>
+  </navigator>
+  <view class='middle weui-flex'>
+    <image class='img' src='/public/images/test/book6.jpg'></image>
+    <view class='weui-flex__item introduction'>
+      <view class='title'>{{order.title}}</view>
+      <view>
+        <view>作者：{{order.author}}</view>
+        <view>出版社：{{order.publisher}}</view>
+      </view>
+    </view>
+    <view class='price'>￥{{order.bookPrice}}</view>
+  </view>
+  <view class='bottom'>实付款：￥{{order.money}}</view>
+  <!--订单详情 end  -->
+
+  <!--下单时间 start  -->
+  <view class='number'>
+    <view>订单编号：{{order.orderNo}}</view>
+    <view>下单时间：{{order.updateTime}}</view>
+  </view>
+  <!--下单时间 end  -->
+
+  <!--底部删除 start  -->
+  <view class='footer'>
+    <button class="weui-btn" type="primary" plain="true">删除订单</button>
+  </view>
+  <!--底部删除 end  -->
+</view>

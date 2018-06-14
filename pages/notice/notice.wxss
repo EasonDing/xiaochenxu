@@ -1,0 +1,29 @@
+/* pages/notice/notice.wxss */
+.page {
+  font-size: 13px;
+  padding: 15px;
+  background-color: #F3F3F3;
+}
+.notice {
+  position: relative;
+  margin: 10px 0;
+}
+.notice_null {
+  text-align: center;
+}
+.notice image{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 1px;
+}
+.notice .date {
+  margin-left: 25px;
+}
+
+.content {
+  margin:5px 25px;
+  padding:15px 10px;
+  background-color:#ffffff;
+  border-radius: 5px;
+}

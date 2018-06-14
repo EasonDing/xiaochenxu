@@ -1,0 +1,29 @@
+/*书友列表  */
+.weui-media-box__desc {
+  line-height: 2.2;
+}
+.weui-media-box {
+  padding: 7px 15px;
+}
+
+.weui-media-box__thumb {
+  border-radius: 5px;
+}
+
+.agree {
+  font-size: 13px
+}
+
+/*内容为空  */
+.null {
+  text-align: center;
+  padding-top: 30px;
+}
+.null_img {
+  width: 80px;
+  height: 80px;
+}
+.null_text {
+  font-size: 17px;
+  color: #666666;
+}

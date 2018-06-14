@@ -1,0 +1,74 @@
+<view>
+  <!--搜索框  start-->
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+      <!-- <navigator wx:for='{{searchFriends}}' wx:key='{{item.id}}' url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>{{item.UserName}}</view>
+        </view>
+      </navigator> -->
+
+      <navigator wx:for='{{searchFriends}}' wx:key='{{item.id}}' url="/pages/user/user?SelectId={{item.UserId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{item.UserLogo}}" alt='/public/images/default_head.png' />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{item.UserName}}</view>
+        <view class="weui-media-box__desc">{{item.City}}</view>
+      </view>
+    </navigator>
+    </view>
+  </view>
+  <!--搜索框 end  -->
+
+  <!--好友列表 start -->
+  <view class="weui-panel__bd">
+
+  <!--好友申请列表  -->
+  <view wx:for='{{applys}}' wx:key='{{item.ApplyId}}' class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{item.UserLogo}}" alt='/public/images/default_head.png' />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{item.UserName}}</view>
+        <view class="weui-media-box__desc">{{item.Content}}</view>
+      </view>
+      <button data-id='{{item.ApplyId}}' class="weui-btn agree" bindtap='updateApply' type="primary">同意</button>
+    </view>
+
+
+  <!--已经是好友的列表  -->
+    <navigator wx:for='{{bookFriends}}' wx:key='{{item.UserId}}' url="/pages/user/user?SelectId={{item.UserId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class="weui-media-box__thumb" src="{{item.UserLogo}}" alt='/public/images/default_head.png' />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{item.UserName}}</view>
+        <view class="weui-media-box__desc">{{item.City}}</view>
+      </view>
+    </navigator>
+  </view>
+  <!--好友列表 end  -->
+
+  <!--书友为空时  -->
+  <view class='null' hidden='{{bookFriends.length > 0}}'>
+    <image class='null_img' src='/public/images/null/friends_null.png'></image>
+    <view class='null_text'>您还没有好友</view>
+  </view>
+</view>

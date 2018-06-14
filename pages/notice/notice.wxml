@@ -1,0 +1,9 @@
+<!--系统通知列表  -->
+<view class='page'>
+  <navigator url='/pages/noticeDetail/noticeDetail?messageId={{item.messageid}}' wx:if='{{noticeList.length > 0}}' class='notice' wx:for='{{noticeList}}' wx:key='item.messageid'>
+    <image src='/public/images/round_green.png'></image>
+    <text class='date'>{{item.time}}</text>
+    <view class='content'>{{item.title}}</view>
+  </navigator>
+   <view class='notice_null' else >暂无消息</view> 
+</view>

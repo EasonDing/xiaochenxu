@@ -1,0 +1,53 @@
+<view>
+  <!--轮播图  -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+    <!-- /pages/lotteryInviteDetail/lotteryInviteDetail -->
+    <navigator url='/pages/lottery/lottery'>
+      <swiper-item>
+        <image bindtap='weiper_click' src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+      </navigator>
+    </block>
+  </swiper>
+
+  <!--  活动  -->
+  <view class='yi_content'>
+    <view style='height:220rpx;'>
+      <view class='content_1'>
+          <view class='img_pic'><image class='img_class' src='http://m.bookfan.cn/images/group/group_logo_1822.png' /></view>
+          <view class='yi_wenzi'>
+              <view style='font-size:14px;margin-left:30rpx;'>1分钱购书</view>
+              <view style='font-size:12px;margin-left:30rpx;color:#ccc'>邀请好友</view>
+          </view>
+      </view>
+
+      <view class='content_2'>
+          <view class='img_pic'><image class='img_class' src='http://m.bookfan.cn/images/group/group_logo_1822.png' /></view>
+          <view class='yi_wenzi'>
+              <view style='font-size:14px;margin-left:30rpx;'>书友会会员</view>
+              <view style='font-size:12px;margin-left:30rpx;color:#ccc'>共享图书</view>
+          </view>
+      </view>
+    </view>
+  </view>
+  <!--我的书吧 列表  start-->
+  <view class='center'>
+    <view class="weui-panel__hd">我的书吧</view>
+    <view class="weui-panel__bd">
+      <navigator wx:for='{{groupList}}' wx:key='{{item.id}}' url="/pages/bookBar/bookBar?groupId={{item.groupId}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+          <image class="weui-media-box__thumb group_logo" src="{{item.groupLogo}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{item.groupName}}</view>
+          <view class="weui-media-box__desc">
+            <text>人数：{{item.MembersNum}}人</text>
+            <!-- <text>书籍：{{item.BooksNum}}本</text> -->
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!--我的书吧 列表  end -->
+</view>

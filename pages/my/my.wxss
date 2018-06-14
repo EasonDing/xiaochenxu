@@ -1,0 +1,85 @@
+/*个人信息  */
+
+.page {
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+button:after {
+  border: 0;
+}
+.login-button {
+  padding: 0;
+  padding-top: 10px;
+  border-radius:0;
+}
+
+.user_info {
+  background-color: #fff;
+}
+
+.user_logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.middle_box {
+  display: inline;
+  padding: 15px 0;
+  line-height: 2em;
+}
+
+.edit {
+  width: 80px;
+  text-align: center;
+}
+
+.edit image {
+  width: 16px;
+  height: 16px;
+  margin-top: 2em;
+}
+
+/*菜单列表  */
+
+.menu_list {
+  border-top: 10px solid #f8f8f8;
+}
+
+.menu_list image {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.menu_list navigator {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.menu_list .my_order {
+  border-bottom: 10px solid #f8f8f8;
+}
+
+.menu_list .bind_phone {
+  border-bottom: 10px solid #f8f8f8;
+}
+
+.weui-cell:before {
+  border-top: 0;
+}
+
+.weui-cells:after {
+  border-bottom: 1px solid #fff;
+}
+
+.share {
+  text-align: left;
+  line-height: 1.8;
+  background: #ffffff;
+  padding-left: 0;
+}
+.share:after {
+  border: none;
+}

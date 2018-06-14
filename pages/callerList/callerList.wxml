@@ -1,0 +1,19 @@
+<!--访客列表  -->
+
+<view>
+<!--访客列表 start -->
+  <view class="weui-panel__bd">
+    <navigator open-type='redirect' wx:for='{{callerList}}' wx:key='{{item.id}}' url="/pages/user/user?SelectId={{item.UserId}}" class="weui-media-box weui-media-box_appmsg user_list" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class='user_logo' class="weui-media-box__thumb" src="{{item.UserLogo}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{item.UserName}}
+        <text class='date'>{{item.updateTime}}</text>
+        </view>
+         <view class="weui-media-box__desc">{{item.city}}</view> 
+      </view>
+    </navigator>
+  </view>
+  <!--访客列表 end  -->
+</view>

@@ -1,0 +1,96 @@
+/*顶部用户信息  */
+
+.user_logo_box {
+  width: 40px;
+  height: 40px;
+}
+
+.add_friends {
+  height: 35px;
+  line-height: 35px;
+}
+.weui-media-box__title {
+  font-size: 13px;
+}
+
+/*顶部帖子详情  */
+
+.content_box {
+  padding: 0 15px;
+}
+
+.content_box .blank {
+  width: 40px;
+  margin-right: 0.8em;
+}
+
+.content_box .blog_content {
+  font-size: 17px;
+}
+
+.content_box .top_blog_image {
+  width: 80px;
+  height: 80px;
+}
+
+/*评论列表  */
+
+.weui-media-box:before {
+  border: 0;
+}
+
+.reply_list {
+  margin-top: 2em;
+  border-top: 10px solid #e5e5e5;
+  padding: 14px 15px 10px;
+  color: #999;
+  font-size: 13px;
+  position: relative;
+}
+
+.comment_box {
+  padding: 0 15px;
+}
+
+.blog_content_box .blank {
+  width: 40px;
+  margin-right: 0.8em;
+}
+
+.blog_comment_box {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom:7px;
+  margin-bottom:8px;
+}
+
+.content_box .blog_comment {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/*回复评论  */
+
+.foot_reply {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  border-top: 1rpx solid #e5e5e5;
+  width: 100%;
+  background: #fff;
+}
+
+.reply_input {
+  margin: 5px;
+  height: 80rpx;
+  padding-left: 10px;
+  border-radius: 5px;
+  background-color: #e5e5e5;
+  font-size: 30rpx;
+}
+.submit {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 5px;
+  color: #69CB40;
+}
+

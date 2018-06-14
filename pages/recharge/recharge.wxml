@@ -1,0 +1,14 @@
+<!--pages/recharge/recharge.wxml-->
+<view class='page'>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{items}}" wx:key='{{item.id}}'>
+      <radio class='radio-item' value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+    </label>
+  </radio-group>
+
+  <view class='footer_btn_box'>
+    <view>
+      <button bindtap='createPayOrder' class='footer_btn'>充值</button>
+    </view>
+  </view>
+</view>

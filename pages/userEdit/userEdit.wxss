@@ -1,0 +1,9 @@
+/* pages/userEdit/userEdit.wxss */
+.page {
+  padding-top: 15px;
+}
+.arrow_right {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}

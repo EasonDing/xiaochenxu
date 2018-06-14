@@ -1,0 +1,14 @@
+/*书吧书友列表  */
+.weui-media-box__hd_in-appmsg {
+  width: 60px;
+  height: 60px;
+}
+.user_list {
+  padding: 7px 15px;
+}
+.user_list .tag {
+  padding: 0 5px;
+  font-size: 30rpx;
+  display: inline;
+  background: #67C73B;
+}

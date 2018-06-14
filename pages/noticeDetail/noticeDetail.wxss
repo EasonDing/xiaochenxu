@@ -1,0 +1,16 @@
+/* pages/noticeDetail/noticeDetail.wxss */
+.page {
+  padding: 15px;
+}
+
+.title {
+  text-align: center;
+  font-size: 17px;
+}
+
+.content {
+  margin-top: 2em;
+  text-indent: 2em;
+  font-size: 13px;
+  color: #999;
+}

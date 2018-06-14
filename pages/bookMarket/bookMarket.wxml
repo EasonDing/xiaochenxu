@@ -1,0 +1,14 @@
+<!--图书流转二维码页面  -->
+
+<view class='book_market'>
+  <view>请对方扫描二维码</view>
+  <view>支付相应金额即可完成流转</view>
+
+  <image class='code' src='{{picUrl}}'></image>
+
+  <view class='price'>￥{{price}}.00</view>
+
+  <!--弹框 start  -->
+  <!-- <view class='set_price' bindtap="modalinput">设置金额</view> -->
+  <!--弹框 end  -->
+</view>

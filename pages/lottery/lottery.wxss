@@ -1,0 +1,75 @@
+/* pages/lottery/lottery.wxss */
+
+.books_img {
+  margin-right: 0.8em;
+  width: 90px;
+  height: 110px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.introduction {
+  padding-top: 8px;
+}
+
+.book_detail .footer {
+  padding-top: 5px;
+}
+
+.book_money {
+  color: orange;
+  font-size: 35rpx;
+}
+
+.original_price {
+  margin-left: 10rpx;
+  font-size: 25rpx;
+  color: #999;
+  line-height: 35rpx;
+}
+
+.btn {
+  height: 30px;
+  line-height: 30px;
+  width: 160rpx;
+  font-size: 25rpx;
+  display: inline-block;
+  right: 15rpx;
+  position: absolute;
+  padding: 0;
+}
+
+.people {
+  font-size: 28rpx;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  color: #fb3737;
+}
+
+.time {
+  position: absolute;
+  right: 15px;
+}
+
+/*活动规则  */
+
+.middle {
+  font-size: 13px;
+  color: #999;
+}
+
+.middle .title {
+  text-align: center;
+  font-size: 17px;
+  color: black;
+  padding-top: 20px;
+}
+
+.middle .rule {
+  margin: 20px 30px 0 30px;
+}
+
+.middle .rule view {
+  line-height: 2em;
+}

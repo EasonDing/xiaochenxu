@@ -1,0 +1,19 @@
+<!--最近收藏列表  -->
+
+<view>
+<!--收藏列表 start -->
+  <view class="weui-panel__bd">
+    <navigator wx:for='{{collectList}}' wx:key='{{item.id}}' url="/pages/user/user" class="weui-media-box weui-media-box_appmsg user_list" hover-class="weui-cell_active">
+      <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+        <image class='user_logo' class="weui-media-box__thumb" src="{{item.imgurl}}" />
+      </view>
+      <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+        <view class="weui-media-box__title">{{item.nickname}}
+        <text class='date'>2017-08-10</text>
+        </view>
+         <view class="weui-media-box__desc">{{item.address}}</view> 
+      </view>
+    </navigator>
+  </view>
+  <!--收藏列表 end  -->
+</view>

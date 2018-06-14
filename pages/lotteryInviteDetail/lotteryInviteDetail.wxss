@@ -1,0 +1,82 @@
+/* pages/lotteryInviteDetail/lotteryInviteDetail.wxss */
+.page {
+  height: 100vh;
+  background: #F7F7F7;
+  padding: 10px;
+}
+
+/*顶部  */
+.top {
+  background: #ffffff;
+  padding: 10px;
+}
+
+.bookfan_logo {
+  width: 30px;
+  height: 30px;
+  vertical-align:middle;
+}
+.bookfan_name {
+   vertical-align:middle; 
+   margin-left: 5px;
+   font-size: 17px;
+}
+
+.user_info {
+  text-align: center;
+}
+
+.user_logo {
+  width: 80px;
+  height: 80px;
+  margin-top: 30px;
+  border-radius:5px;
+}
+.user_name {
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+.title {
+  font-size: 13px;
+  color: #666666;
+}
+
+/*中间  */
+.middle {
+  background: #ffffff;
+  padding:10px;
+  margin-top: 10px;
+}
+.help {
+  background: #5bc53f;
+  color: #ffffff;
+}
+
+/*底部  */
+.footer {
+  background: #ffffff;
+  margin-top: 10px;
+}
+.footer_top {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.invite_count {
+  font-size: 17px;
+  color: orange;
+}
+.invite_title {
+  color: #666666;
+  font-size: 13px;
+}
+
+.user_box {
+  width: 20%;
+  text-align: center;
+  display: inline-block;
+}
+.invite_user_logo {
+  width: 50px;
+  height: 50px;
+}

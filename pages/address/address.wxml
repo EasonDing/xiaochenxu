@@ -1,0 +1,59 @@
+<!--地址列表  -->
+<view class='page'>
+  <view class='address_box'>
+    <view>
+      <radio-group bindchange="radioChange">
+        <view class='address' wx:for="{{addressList}}" wx:key="{{item.AddId}}">
+          <text>{{item.name}}</text>
+          <text class='mobile'>{{item.phone}}</text>
+          <view class='address_detail'>{{item.area}}{{item.address}}</view>
+          <!--设置默认 start  -->
+          <view class='weui-flex'>
+            <label class="weui-cell weui-check__label">
+              <radio class="weui-check" value="{{item.AddId}}" checked="{{item.checked}}" />
+              <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                <icon class="weui-icon-checkbox_circle" type="circle" size="17" wx:if="{{!item.checked}}"></icon>
+                <icon class="weui-icon-checkbox_success" type="success" size="17" wx:if="{{item.checked}}"></icon>
+              </view>
+              <view class="weui-cell__bd">{{item.checked ? '默认地址' : '设为默认'}}</view>
+            </label>
+            <view class='weui-flex__item manipulate'>
+            <!--/pages/addressEdit/addressEdit  -->
+              <view bindtap='edit'>
+                <image src='/public/images/address_edit.png'></image>
+                <text>编辑</text>
+              </view>
+              <view id='{{item.AddId}}' bindtap="openConfirm">
+                <image src='/public/images/delete.png'></image>
+                <text>删除</text>
+              </view>
+            </view>
+          </view>
+          <!--设置默认 end  -->
+        </view>
+        <!--地址为空时  -->
+          <view class='null' hidden='{{addressList.length > 0}}'>
+            <image class='null_img' src='/public/images/null/address_null.png'></image>
+            <view class='null_text'>您还没未添加收货地址</view>
+          </view>
+      </radio-group>
+    </view>
+  </view>
+
+  <!--新增地址 start  -->
+  <view style='height:45px;'></view>
+  <view class='footer_btn_box'>
+    <view>
+    <button bindtap='add' class='footer_btn' >添加地址</button>
+    </view>
+  </view>
+  
+  <!--新增地址 end  -->
+
+  <!--错误提示  -->
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopTipsText}}</view>
+
+  <!--成功提示  -->
+  <button class="weui-btn" type="default" bindtap="openToast">{{toastText}}</button>
+
+</view>

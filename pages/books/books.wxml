@@ -1,0 +1,29 @@
+<view class='page'>
+  <view class="weui-flex top">
+    <view class="weui-flex__item"></view>
+    <view class="weui-flex__item">
+      <view id='0' bindtap='tabClick' class="placeholder {{in}}">流入</view>
+    </view>
+    <view class="weui-flex__item">
+      <view id='1' bindtap='tabClick' class="placeholder {{out}}">流出</view>
+    </view>
+    <view bindtap='scanCode' class="weui-flex__item sweep">
+      <image src='/public/images/sweep.png'></image>
+    </view>
+  </view>
+<view  class='grids_box'>
+  <view class="weui-grids">
+    <block wx:for="{{books}}" wx:key="item.id">
+      <navigator url="/pages/bookDetail/bookDetail?bookCode={{item.CODE}}&isInflow={{item.isInflow}}" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="{{item.Logo}}" />
+        <view class="weui-grid__label">{{item.Name}}</view>
+      </navigator>
+    </block>
+  </view>
+  <!--图书为空时  -->
+  <view class='null' hidden='{{books.length > 0}}'>
+    <image class='null_img' src='/public/images/null/book_null.png'></image>
+    <view class='null_text'>您还没有图书</view>
+  </view>
+  </view>
+</view>

@@ -1,0 +1,80 @@
+<!--帖子详情页面  -->
+<view class='blog_detail'>
+  <!--顶部用户信息 start  -->
+  <view class="weui-media-box weui-media-box_appmsg">
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg user_logo_box">
+      <image class="weui-media-box__thumb" src="{{blog.userLogo}}" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+      <view class="weui-media-box__title">{{blog.userName}}</view>
+      <view class="weui-media-box__desc">{{blog.updateTime}}</view>
+    </view>
+    <!-- <button class="add_friends" type="primary" plain="true">加好友</button> -->
+  </view>
+  <!--顶部用户信息 end  -->
+
+  <!--顶部帖子图片及内容 start  -->
+  <view class="weui-flex content_box">
+    <view class='blank'></view>
+    <view class="weui-flex__item">
+      <text class='blog_content'>{{blog.content}}</text>
+    </view>
+  </view>
+  <view class="weui-flex content_box">
+    <view class='blank'></view>
+    <view class="weui-flex__item">
+      <view class="weui-flex">
+        <image wx:if='{{blog.reAlbumList.length > 0}}' wx:for='{{blog.reAlbumList}}' wx:key='{{item.id}}' class="weui-flex__item top_blog_image" src='{{item.photoURL}}'></image>
+      </view>
+    </view>
+  </view>
+  <!--顶部帖子图片及内容 end  -->
+
+
+  <!--用户回复列表 start -->
+  <view class="reply_list">全部回复</view>
+  <view wx:if='{{blogCommentList.length > 0}}'>
+    <view wx:for='{{blogCommentList}}' wx:key='{{item.CoomentId}}'>
+      <view class="weui-media-box weui-media-box_appmsg comment_box">
+        <view class="weui-media-box__hd weui-media-box__hd_in-appmsg user_logo_box">
+          <image class="weui-media-box__thumb" src="{{item.UserLogo}}" />
+        </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+          <view class="weui-media-box__title">{{item.UserName}}</view>
+          <view class="weui-media-box__desc">{{item.UpdateTime}}</view>
+        </view>
+      </view>
+      <view class="weui-flex content_box">
+        <view class='blank'></view>
+        <view class="weui-flex__item blog_comment_box">
+          <text class='blog_comment'>{{item.Content}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view wx:else class="weui-loadmore weui-loadmore_line">
+    <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无评论</view>
+  </view>
+  <!--用户回复列表 end  -->
+
+
+  <!--回复评论 start -->
+  <form bindsubmit='formSubmit'>
+    <view class='weui-flex foot_reply'>
+      <view class='weui-flex__item'>
+        <input name='blogId' value='{{blog.blogId}}' style='display:none' />
+        <input name='comment' value='{{commentText}}' class="weui-input reply_input" placeholder="尽情畅所欲言吧!" />
+      </view>
+      <button class='submit' form-type='submit'>回复</button>
+    </view>
+  </form>
+  <!--回复评论 end  -->
+
+  <!--错误提示  -->
+  <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopTipsText}}</view>
+
+  <!--成功提示  -->
+  <button class="weui-btn" type="default" bindtap="openToast">{{toastText}}</button>
+
+</view>

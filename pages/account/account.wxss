@@ -1,0 +1,85 @@
+/* pages/account/account.wxss */
+
+/*顶部  */
+.top {
+  padding: 0 15px;
+  text-align: center;
+  height: 30vh;
+}
+.top_box {
+  padding: 15% 0;
+}
+.top_box .account {
+  font-size: 35px;
+  color: #67C522;
+}
+.top_box view {
+  font-size: 14px;
+}
+
+.bill {
+  font-size: 14px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #F8F8F8;
+  padding: 0 15px;
+}
+
+/*账单列表  */
+.weui-media-box__hd_in-appmsg {
+  width: 50px;
+  height: 50px;
+}
+.accountDetail {
+  /* margin-bottom: 50px; */
+}
+
+.user_list {
+  padding: 5px 15px;
+}
+
+.user_list .user_logo {
+  width: 40px;
+  height: 40px;
+}
+
+.date {
+  color: #999;
+  font-size: 13px;
+  position: absolute;
+  right: 15px;
+}
+
+/*底部按钮  */
+
+.footer_btn_box {
+  border-top: 1px solid #F7F7F7;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 5px;
+}
+
+.footer_btn {
+  background: #FFFFFF;
+  color: #5bc53f;
+  border: 1px solid #5bc53f;
+  font-size: 17px;
+  margin:0 15px;
+}
+
+/*内容为空  */
+.null {
+  text-align: center;
+  padding-top: 30px;
+}
+.null_img {
+  width: 80px;
+  height: 80px;
+}
+.null_text {
+  font-size: 17px;
+  color: #666666;
+}

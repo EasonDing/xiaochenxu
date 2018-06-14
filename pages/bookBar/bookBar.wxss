@@ -1,0 +1,202 @@
+/*书吧信息  */
+
+.group_logo_box {
+  margin-right: 0.8em;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.weui-media-box {
+  padding: 15px 15px 15px;
+}
+
+.weui-media-box__desc {
+  line-height: 1.2;
+  -webkit-line-clamp: 3
+}
+
+.weui-media-box__desc text {
+  margin-right: 30rpx;
+}
+
+/*书吧成员列表  */
+
+.weui-cell:before {
+  border: 0;
+}
+
+.user_list {
+  border: 0;
+  margin: 15px;
+  height: 40px;
+  position: relative;
+}
+
+.user_list .user_logo {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 15rpx;
+}
+
+.user_list .user_count {
+  position: absolute;
+  right: 0;
+}
+
+/*专栏列表  */
+
+.column_img {
+  margin-right: 0.8em;
+  width: 100px;
+  height: 80px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.column_detail_foot image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.column_detail_foot text {
+  font-size: 30rpx;
+  margin-left: 2px;
+}
+
+.weui-cell {
+  padding: 0;
+}
+
+.columnList .comment_count {
+  text-align: right;
+  padding: 0;
+  border-bottom: 0px;
+}
+
+.columnList .comment_count image {
+  padding-top: 5rpx;
+  width: 13px;
+  height: 13px;
+}
+
+.columnList .comment_count text {
+  color: #d5d5d5;
+  font-size: 13px;
+}
+
+/*书架列表  */
+
+.books_img {
+  margin-right: 0.8em;
+  width: 90px;
+  height: 110px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.book_detail view {
+  margin-top: 8rpx;
+}
+
+.book_money {
+  color: orange;
+}
+
+/*帖子列表  */
+
+/*用户信息  */
+
+.user_logo_box {
+  width: 40px;
+  height: 40px;
+}
+
+.add_friends {
+  height: 35px;
+  line-height: 35px;
+}
+
+/*帖子列表  */
+
+.content_box {
+  padding: 0 15px;
+}
+
+.weui-media-box__title {
+  font-size: 13px;
+}
+
+.content_box .blank {
+  width: 40px;
+  margin-right: 0.8em;
+}
+
+.content_box .blog_content {
+  font-size: 17px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  margin-bottom: 10px;
+}
+
+.content_box .top_blog_image {
+  width: 80px;
+  height: 80px;
+}
+
+.comment_count {
+  padding: 5px 15px;
+  text-align: right;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.comment_count image {
+  padding-top: 5rpx;
+  width: 13px;
+  height: 13px;
+}
+
+.comment_count text {
+  color: #d5d5d5;
+  margin-left: 2px;
+  font-size: 13px;
+}
+
+/* 新增帖子 */
+
+.add_blog {
+  position: fixed;
+  right: 30px;
+  bottom: 20%;
+  border: 1px solid #f5f5f5;
+  box-shadow: 0 0 20px #e5e5e5;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.add_blog image {
+  width: 50px;
+  height: 50px;
+}
+
+/*内容为空  */
+.null {
+  text-align: center;
+  padding-top: 30px;
+}
+.null_img {
+  width: 80px;
+  height: 80px;
+}
+.null_text {
+  font-size: 17px;
+  color: #666666;
+}

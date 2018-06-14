@@ -1,0 +1,7 @@
+/*标题、内容  */
+.blog_create {
+  padding: 0 15px;
+}
+.content {
+  font-size: 16px;
+}

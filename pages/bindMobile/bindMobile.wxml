@@ -1,0 +1,33 @@
+<!--编辑地址  -->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+  <!--错误提示  -->
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopText}}</view>
+
+    <form bindsubmit='formSubmit'>
+    <view type='tel' class="weui-cells weui-cells_after-title bindPhone">
+      <view class=" weui-cell weui-cell_input weui-cell_vcode ">
+        <view class="weui-cell__hd ">
+          <view class="weui-label ">手机号</view>
+        </view>
+        <view class="weui-cell__bd ">
+          <input bindblur="phoneInputEvent" name='phone' class="weui-input " placeholder="请输入手机号 " />
+        </view>
+        <view class="weui-cell__ft ">
+          <button  bindtap='getCode' class="weui-vcode-btn getCode">{{btn_text}}</button>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input ">
+        <view class="weui-cell__hd ">
+          <view class="weui-label ">验证码</view>
+        </view>
+        <view class="weui-cell__bd ">
+          <input name='code' class="weui-input " placeholder="请输入验证码 " />
+        </view>
+      </view>
+    </view>
+    <button form-type='submit' class="weui-btn" type="primary">提交</button>
+    </form>
+    <view class='foot_text'>小提示：为了您的信息安全，我们需要进行短信校验</view>
+  </view>
+</view>

@@ -1,0 +1,23 @@
+/* pages/recharge/recharge.wxss */
+.page {
+  margin: 15px;
+}
+.radio-item {
+  margin: 30px 10px
+}
+
+/*底部按钮  */
+
+.footer_btn_box {
+  border-top: 1px solid #F7F7F7;
+  width: 100%;
+  background: #FFFFFF;
+  margin-top: 15%
+}
+
+.footer_btn {
+  background: #FFFFFF;
+  color: #5bc53f;
+  border: 1px solid #5bc53f;
+  font-size: 17px;
+}

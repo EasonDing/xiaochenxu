@@ -1,0 +1,48 @@
+<!--书架中购买图书  -->
+<view class='page'>
+  <!--图书信息 start  -->
+  <navigator url='' class="weui-media-box weui-media-box_appmsg book" hover-class="weui-cell_active">
+    <view class="weui-media-box__hd books_img">
+      <image class="weui-media-box__thumb" src="{{book.Logo}}" />
+    </view>
+    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg book_detail">
+      <view class="weui-media-box__title book_detail_top">
+        <text>{{book.Name}}</text>
+        <text class='price'>￥{{book.price}}</text>
+      </view>
+      <view class="weui-media-box__desc author">
+        <text>{{book.author}}</text>
+      </view>
+      <view class="weui-media-box__desc introduction">
+        <text>{{book.introduce}}</text>
+      </view>
+    </view>
+  </navigator>
+  <!--图书信息 end  -->
+
+  <!--地址信息 start  -->
+  <navigator url='/pages/address/address' class='address_box weui-flex'>
+    <image class='address_icon' src='/public/images/my/address.png'></image>
+    <view>
+      <view class='user_info'>
+        <text>{{address.name}}</text>
+        <text class='phone'>{{address.phone}}</text>
+      </view>
+      <view>{{address.area}}{{address.address}}</view>
+    </view>
+    <image class='arrow_right' src='/public/images/arrow_right.png'></image>
+  </navigator>
+  <!--地址信息 end  -->
+
+  <!--底部 start  -->
+  <view class="weui-flex flex_foot">
+    <view class='weui-flex__item price_box'>
+      <text>价格：</text>
+      <text class='price'>{{book.price}}</text>
+    </view>
+    <view>
+    <button bindtap='buy' class='footer_btn'>立即购买</button>
+    </view>
+  </view>
+  <!--底部 end  -->
+</view>

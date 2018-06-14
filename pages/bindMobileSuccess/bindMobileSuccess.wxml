@@ -1,0 +1,16 @@
+<!--pages/bindMobileSuccess/bindMobileSuccess.wxml-->
+<view class='page'>
+  <image class='code' src='/public/images/mobile.png'></image>
+
+  <view class='mobile_box'>
+    <view class='mobile'>{{phone}}</view>
+    <view>已绑定手机号</view>
+  </view>
+
+  <!--绑定手机号 start  -->
+  <navigator url='/pages/bindPhone/bindPhone?from=updateBindPhone' class='edit'>
+    <text>更改手机号</text>
+    <image class='arrow_right' src='/public/images/arrow_right.png'></image>
+  </navigator>
+  <!--绑定手机号 end  -->
+</view>

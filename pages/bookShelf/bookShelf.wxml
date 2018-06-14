@@ -1,0 +1,24 @@
+<view>
+  <view class='book_info'>
+    <image class='book_logo' src='{{book.Logo}}'></image>
+    <view class='book_name'>{{book.Name}}</view>
+    <view class='book_author'>{{book.author}}</view>
+  </view>
+  <view class='book_introduction'>{{book.introduce}}</view>
+  <image style='width:100%; height:100vh;' src='{{book.Logo}}'></image>
+  <!--底部购买框 start -->
+  <view class="weui-flex flex_foot">
+    <view class='weui-flex__item price_box'>
+      <text>价格：</text>
+      <text class='price'>{{book.price}}</text>
+    </view>
+    <!-- <navigator url='/pages/lottery/lottery'>
+      <button type="primary">一元购</button>
+    </navigator> -->
+    <!--/pages/buyBook/buyBook?code={{code}}  -->
+    <navigator url=''>
+      <button bindtap='buy' class='footer_btn'>我要流入</button>
+    </navigator>
+  </view>
+  <!--底部购买框 end  -->
+</view>

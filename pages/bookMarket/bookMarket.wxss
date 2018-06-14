@@ -1,0 +1,18 @@
+/* pages/bookMarket/bookMarket.wxss */
+
+.book_market {
+  padding: 15% 15px;
+  text-align: center;
+}
+.code {
+  margin-top:20%; 
+  width: 150px;
+  height: 150px;
+}
+.price {
+  margin-top: 20%;
+}
+
+.set_price {
+  margin-top: 20%;
+}

@@ -1,0 +1,33 @@
+<!--创建帖子  -->
+<!--标题 内容 start  -->
+<view class='blog_create'>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <!-- <input name='title' class="weui-input" placeholder="填写标题" /> -->
+  <textarea name='content' class="weui-textarea content" placeholder="填写内容" />
+  <!-- <view class="weui-textarea-counter">0/100</view> -->
+  <!--标题 内容 end  -->
+
+  <!--图片上传 start  -->
+  <view class="weui-uploader__bd">
+    <view class="weui-uploader__files" id="uploaderFiles">
+      <block wx:for="{{filePaths}}" wx:key="*this">
+        <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+          <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+        </view>
+      </block>
+    </view>
+    <view class="weui-uploader__input-box">
+      <view class="weui-uploader__input" bindtap="chooseImage"></view>
+    </view>
+  </view>
+  <!--图片上传 end  -->
+
+  <button class="weui-btn" formType="submit" type="primary">发布</button>
+
+  <!--错误提示  -->
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopTipsText}}</view>
+
+  <!--成功提示  -->
+    <button class="weui-btn" type="default" bindtap="openToast">{{toastText}}</button>
+  </form>
+</view>

@@ -1,0 +1,61 @@
+<view>
+  <view class="page__bd">
+    <view class="weui-article">
+      <!--文章内容 start  -->
+      <view class="weui-article__h1">{{column.subtitle}}</view>
+      <view class="weui-article__section">
+        <view class="weui-article__title column_top_box">{{column.updateTime}}
+          <text class='reading'>阅读量：{{column.reading}}</text>
+        </view>
+        <view class="weui-article__section">
+          <text class="weui-article__p">{{column.content}}</text>
+          <view class="weui-article__p">
+            <image class="weui-article__img" src="{{column.image}}" mode="aspectFit" style="height: 180px" />
+          </view>
+        </view>
+      </view>
+      <!--文章内容 end  -->
+      <!--评论列表 start -->
+      <view wx:if='{{CommentsList.length > 0}}'>
+      <view class='column_comment' wx:for='{{CommentsList}}' wx:key='item.id'>
+        <view>
+          <image class='user_logo' src='{{item.UserLogo}}'></image>
+        </view>
+        <navigator url='' class='comment_right_box'>
+          <view class="comment_detail_box weui-media-box_text">
+            <view class="weui-media-box__title weui-media-box__title_in-text">{{item.UserName}}
+              <view class='comment_date'>{{item.UpdateTime}}</view>
+            </view>
+            <view class="weui-media-box__desc content">{{item.Content}}</view>
+          </view>
+        </navigator>
+      </view>
+      </view>
+
+      <!--没有评论时显示  -->
+      <view wx:else class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无评论</view>
+        </view>
+
+      <!--评论列表 end  -->
+    </view>
+
+    <!--错误提示  -->
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopTipsText}}</view>
+
+    <!--成功提示  -->
+    <button class="weui-btn" type="default" bindtap="openToast">{{toastText}}</button>
+
+    <!--回复评论 start -->
+    <form bindsubmit='formSubmit'>
+      <view class='weui-flex foot_reply'>
+        <view class='weui-flex__item'>
+          <input name='columnId' value='{{column.columnId}}' style='display:none' />
+          <input name='comment' value='{{commentText}}' class="weui-input reply_input" placeholder="尽情畅所欲言吧!" />
+        </view>
+        <button class='submit' form-type='submit'>回复</button>
+      </view>
+    </form>
+    <!--回复评论 end  -->
+  </view>
+</view>

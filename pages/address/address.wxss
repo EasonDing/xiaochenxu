@@ -1,0 +1,96 @@
+/* pages/address/address.wxss */
+
+.address_box {
+  font-size: 13px;
+}
+
+.address {
+  border-bottom: 10px solid #f9f9f9;
+  padding: 15px;
+}
+
+.address text {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.mobile {
+  margin-left: 20px;
+}
+
+.address_detail {
+  margin: 6px 0;
+}
+
+.weui-cell {
+  padding: 10px 0 0;
+  width: 35%;
+}
+
+.weui-cell:before {
+  border-top: 0;
+}
+
+.weui-flex {
+  position: relative;
+  border-top: 1px solid #f9f9f9;
+}
+
+.manipulate {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+
+.manipulate view {
+  display: inline-block;
+}
+.manipulate navigator {
+  display: inline-block;
+}
+
+.manipulate text {
+  font-size: 13px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.manipulate image {
+  vertical-align: middle;
+  height: 19px;
+  width: 19px;
+}
+
+/*内容为空  */
+.null {
+  text-align: center;
+  padding-top: 30px;
+}
+.null_img {
+  width: 80px;
+  height: 80px;
+}
+.null_text {
+  font-size: 17px;
+  color: #666666;
+}
+
+/*底部按钮  */
+
+.footer_btn_box {
+  border-top: 1px solid #F7F7F7;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  background: #FFFFFF;
+  padding: 5px;
+}
+
+.footer_btn {
+  background: #FFFFFF;
+  color: #5bc53f;
+  border: 1px solid #5bc53f;
+  font-size: 17px;
+  margin:0 15px;
+}

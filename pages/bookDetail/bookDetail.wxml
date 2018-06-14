@@ -1,0 +1,64 @@
+<!--顶部图书详情  -->
+<view>
+  <!--顶部个人信息 start  -->
+  <view class='top_box'>
+    <image class='user_logo' src='{{book.Logo}}'></image>
+    <view class='username'>{{book.Name}}</view>
+    <view class='user_address'>{{book.author}}</view>
+    <!--/pages/collectList/collectList  -->
+    <navigator url='#' class='collect_box'>
+      <text class='collect_count'>{{collectCount}}人收藏</text>
+      <image class='collect_image' src='/public/images/arrow_right.png'></image>
+    </navigator>
+  </view>
+  <!--顶部图书详情 end  -->
+
+  <!--navBar start  -->
+  <view class="page">
+    <view class="page__bd">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <view class='introduction'>{{book.introduce}}</view>
+          </view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+            <navigator url='' wx:if='{{floatList.length > 0}}' class='notice' wx:for='{{floatList}}' wx:key='item.messageid'>
+              <image class='round' src='/public/images/round_green.png'></image>
+              <text class='date'>{{item.updateTime}}</text>
+              <view class='content'>
+                <image class='userLogo' src='{{item.LogoData}}'></image>
+                <view class='visit'>{{item.UserName}}流入了书架</view>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!--navBar end  -->
+
+  <!--底部我要流出 start  -->
+  <view style='height:45px;'></view>
+  <view wx:if='{{isInflow > 0}}' class='footer_btn_box'>
+    <view>
+      <button bindtap="modalinput" class="weui-btn footer_btn" type="primary" plain="true">我要流出</button>
+    </view>
+  </view>
+  <!--底部我要流出 end  -->
+  <!--弹框 start  -->
+  <modal hidden="{{hiddenmodalput}}" title="设置流转金额" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input bindblur='getPrice' type='number' placeholder="请输入金额"/>
+  </modal>
+  <!--弹框 end  -->
+
+  <!--错误提示  -->
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopTipsText}}</view>
+</view>

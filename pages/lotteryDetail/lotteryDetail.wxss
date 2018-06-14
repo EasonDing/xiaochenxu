@@ -1,0 +1,99 @@
+/* pages/lotteryDetail/lotteryDetail.wxss */
+
+.top {
+  font-size: 13px;
+  color: #999;
+  padding: 20px 0 ;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.books_img {
+  margin-right: 0.8em;
+  width: 90px;
+  height: 110px;
+  line-height: 60px;
+  text-align: center;
+}
+.book_name {
+  color: black;
+}
+.top .introduction {
+  padding-top: 10px;
+}
+.book_detail .footer {
+  padding-top: 9px;
+  line-height: 25px;
+}
+.book_money {
+  color: orange;
+  font-size: 35rpx;
+}
+.original_price {
+  margin-left: 10px;
+  font-size: 30rpx;
+  color:#999;
+}
+.date {
+  color: red;
+  font-size: 28rpx;
+  right: 15rpx;
+  position: absolute;
+}
+
+.people {
+  font-size: 17px;
+  color: red;
+  position: absolute;
+  right: 15px;
+}
+.time {
+  position: absolute;
+  right: 15px;
+}
+
+/*好友支持列表  */
+.middle {
+  font-size: 13px;
+  color: #999;
+}
+.middle .title_box {
+  text-align: center;
+}
+.middle .title {
+  font-size: 17px;
+  color: orange;
+  margin: 15px 0 5px 0;
+}
+.middle .user_logo_list {
+  padding: 15px;
+}
+.middle .user_logo {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+}
+
+/*图书简介  */
+.book {
+  text-align: center;
+  margin-top: 10px;
+}
+.book .title{
+  font-size: 17px;
+}
+
+/*底部按钮  */
+
+.footer_btn_box {
+  border-top: 1px solid #f7f7f7;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+}
+
+.footer_btn {
+  margin: 0 15px;
+}

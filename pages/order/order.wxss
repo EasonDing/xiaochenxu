@@ -1,0 +1,85 @@
+/* pages/order/order.wxss */
+
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-tab__content {
+  padding-top: 60px;
+  text-align: center;
+}
+.weui-navbar {
+  background-color: #ffffff;
+}
+
+/*全部订单  */
+
+.order {
+  border-top: 10px solid #f8f8f8;
+}
+
+.top {
+  font-size: 13px;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.top .status {
+  color: #58A419;
+  right: 15px;
+  position: absolute;
+}
+.middle {
+  padding: 10px 15px;
+  background-color: #F8F8F8;
+}
+.middle .img {
+  width: 60px;
+  height: 80px;
+}
+.introduction {
+  font-size: 13px;
+  color: #8B8B8B;
+  margin-left: 10px;
+}
+.introduction view:nth-child(1) {
+  margin-top: 5px;
+}
+.middle .title {
+  font-size: 17px;
+  font-weight: 400;
+   color: black;
+}
+.middle .price {
+  color: orange;
+}
+.footer {
+  padding: 10px 15px;
+  height: 30px;
+}
+.footer button {
+  float: right;
+  width:90px;
+  font-size:13px;
+  line-height:2;
+  border-radius: 3px;
+}
+
+/*内容为空  */
+.null {
+  text-align: center;
+  padding-top: 30px;
+}
+.null_img {
+  width: 80px;
+  height: 80px;
+}
+.null_text {
+  font-size: 17px;
+  color: #666666;
+}
+
