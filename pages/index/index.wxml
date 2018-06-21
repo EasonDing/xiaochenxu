@@ -15,18 +15,20 @@
   <view class='yi_content'>
     <view style='height:220rpx;'>
       <view class='content_1'>
-          <view class='img_pic'><image class='img_class' src='http://m.bookfan.cn/images/group/group_logo_1822.png' /></view>
+          <view class='img_pic'><image class='img_class' src='/public/images/vip_1_2.png' /></view>
           <view class='yi_wenzi'>
-              <view style='font-size:14px;margin-left:30rpx;'>1分钱购书</view>
-              <view style='font-size:12px;margin-left:30rpx;color:#ccc'>邀请好友</view>
+              <view style='font-size:14px;margin-left:20rpx;color:#333333'>1分钱购书</view>
+              <view style='font-size:12px;margin-left:20rpx;color:#ccc'>邀请好友</view>
           </view>
       </view>
 
+      <view></view>
+
       <view class='content_2'>
-          <view class='img_pic'><image class='img_class' src='http://m.bookfan.cn/images/group/group_logo_1822.png' /></view>
+          <view class='img_pic' style='margin-left:20rpx;'><image class='img_class' src='/public/images/vip_1_1.png' /></view>
           <view class='yi_wenzi'>
-              <view style='font-size:14px;margin-left:30rpx;'>书友会会员</view>
-              <view style='font-size:12px;margin-left:30rpx;color:#ccc'>共享图书</view>
+              <view style='font-size:14px;margin-left:20rpx;color:#333333'>书友会会员</view>
+              <view style='font-size:12px;margin-left:20rpx;color:#ccc'>共享图书</view>
           </view>
       </view>
     </view>

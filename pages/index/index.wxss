@@ -22,15 +22,15 @@ swiper {
 }
 /** 购书活动**/
 .yi_content{
-  height: 260rpx;
-  background: #ccc
+  height: 250rpx;
+  background: #f5f5f5
 }
 .content_1{
   
   width: 40%;
   float: left;
   background: #fff;
-  margin:25rpx 0;
+  margin:12rpx 0;
   padding:7% 5%;
 }
 
@@ -50,8 +50,8 @@ swiper {
   width: 50%;
   float: left;
   background: #fff;
-  margin:25rpx 0;
+  margin:12rpx -1px;
   padding:7% 0;
-
+  border-left:1px #f5f5f5 solid;
 }
 
