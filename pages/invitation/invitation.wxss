@@ -1,0 +1,11 @@
+.top_back{
+  margin: 0 auto;
+  height: 425rpx;
+  /* background-image: url('../../public/images/home_bg.png') no-repeat; */
+  background-size: 100% 100%;
+}
+
+.head_img{
+  text-align: center;
+  margin-top: 40px;
+}
