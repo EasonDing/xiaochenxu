@@ -14,6 +14,7 @@
   <!--  活动  -->
   <view class='yi_content'>
     <view style='height:220rpx;'>
+    <navigator url='/pages/lottery/lottery'>
       <view class='content_1'>
           <view class='img_pic'><image class='img_class' src='/public/images/vip_1_2.png' /></view>
           <view class='yi_wenzi'>
@@ -21,7 +22,8 @@
               <view style='font-size:12px;margin-left:20rpx;color:#ccc'>邀请好友</view>
           </view>
       </view>
-
+      </navigator>
+  
       <view></view>
 
       <view class='content_2'>

@@ -45,6 +45,8 @@ swiper {
 }
 .yi_wenzi{
   float: left;
+  margin-top:6px;
+
 }
 .content_2{
   width: 50%;
