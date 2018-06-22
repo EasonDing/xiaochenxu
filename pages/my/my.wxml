@@ -61,7 +61,7 @@
             <image src="/public/images/my/mobile.png" />
           </view>
           <view class="weui-cell__bd weui-cell_primary">
-            <view>绑定手机号</view>
+            <view>关联绑定</view>
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
