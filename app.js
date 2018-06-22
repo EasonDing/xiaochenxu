@@ -20,6 +20,7 @@ App({
         method: "POST",
         success: function (res) {
           var data = res.data
+          console.log(data)
           //判断本地token是否有效，无效就重新授权
           if (data.code === 200) {
             wx.setStorageSync('userId', data.data.user_id)
@@ -49,6 +50,7 @@ App({
             method: "POST",
             success: function (res) {
               //本地保存token
+              
               wx.setStorageSync('token', res.data.data.token)
               that.getUserInfo()
             }

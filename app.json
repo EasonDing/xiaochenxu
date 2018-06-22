@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/invitindex/invitindex",
     "pages/index/index",
+    "pages/invitindex/invitindex",
+    
     "pages/invitation/invitation",
     "pages/bookBar/bookBar",
     "pages/column/column",

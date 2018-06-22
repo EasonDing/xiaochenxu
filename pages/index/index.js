@@ -51,10 +51,42 @@ Page({
     // that.login()
   },
 
+  //  点击书友会会员跳转
+  is_vip:function(e){
+    var that = this;
+    var userId = wx.getStorageSync('userId');
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/check_vip',
+      data: {
+        t: 'GetGroupForUserId',
+        UserId: userId
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        //console.log(res.data.code)
+        if(res.data.code == 200){
+          if(res.data.data == 1){
+            wx.navigateTo({
+              url: '/pages/invitation/invitation',
+           })
+          }else{
+
+          }
+        }else{
+
+        }
+       
+      }
+    })
+  },
+
   // 获取已加入的书吧信息
   getGroupList: function (e) {
     var that = this;
-    var userId = wx.getStorageSync('userId')
+    var userId = wx.getStorageSync('userId');
     wx.request({
       url: 'https://m.bookfan.cn/admin/servlet/group.php',
       data: {
