@@ -1,9 +1,9 @@
 {
   "pages": [
+    
+    "pages/index/index",
     "pages/invitation/invitation",
     "pages/invitindex/invitindex",
-    "pages/index/index",
-    
     "pages/bookBar/bookBar",
     "pages/column/column",
     "pages/blog/blog",

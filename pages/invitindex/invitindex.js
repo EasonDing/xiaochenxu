@@ -33,6 +33,20 @@ Page({
     that.getlist(userId);
   },
 
+  naviga_url: function (e) {
+    var naviga_id = e.currentTarget.id;
+    var userId = wx.getStorageSync('userId');
+    if (userId != naviga_id){
+      wx.navigateTo({
+          url: '/pages/invitindex/invitindex?userId='+naviga_id,
+        })
+    }else{
+      wx.navigateTo({
+        url: '/pages/invitation/invitation',
+      })
+    }
+  },
+
   getlist: function (userId) {
     var that = this;
     var userId = userId;
@@ -58,6 +72,12 @@ Page({
           u_info:data.u_info
         })
       }
+    })
+  },
+
+  add_friend:function(){
+    wx.switchTab({
+      url: '/pages/bookFriends/bookFriends',
     })
   },
 

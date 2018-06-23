@@ -13,7 +13,9 @@ Page({
     avatarUrl:'',
     income:'0.00',
     invite_number:0,
-    invite_list:[]
+    invite_list:[],
+    userId:'',
+    u_info:[]
   },
 
   /**
@@ -37,6 +39,7 @@ Page({
     that.getlist();
   },
 
+
   getlist:function(){
     var that = this;
     var userId = wx.getStorageSync('userId');
@@ -57,7 +60,9 @@ Page({
         that.setData({
           income: data.income,
           invite_number: data.number,
-          invite_list:data.info
+          invite_list:data.info,
+          userId: userId,
+          u_info: data.u_info
         })
       }
     })
@@ -180,7 +185,22 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    console.log(res);
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    var userId = wx.getStorageSync('userId')
+    return {
+      title: '邀请您参加“购买书友会会员活动“',
+      path: '/pages/index/index?invited_id=' + userId ,
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   }
 })

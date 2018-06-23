@@ -11,7 +11,9 @@ Page({
     autoplay: true,//是否自动切换	
     interval: 5000,//自动切换时间间隔	
     duration: 1000,//滑动动画时长
-    groupList: []
+    groupList: [],
+    invited_id: 3183,
+    order:[]
   },
   changeIndicatorDots: function (e) {
     this.setData({
@@ -42,13 +44,147 @@ Page({
       url: '../logs/logs'
     })
   },
+
   onLoad: function (options) {
     var that = this;
     wx.showLoading({
       title: '加载中...',
       mask: true
     })
+    if (options.invited_id){
+      that.setData({
+        invited_id: options.invited_id,
+      })
+    }
+    
     // that.login()
+   
+  },
+  onReady:function(){
+    var that = this;
+    var invited_id = that.data.invited_id;
+    
+    if (invited_id > 0 ) {
+      setTimeout(function () {
+
+        that.invit_pay(invited_id);//自己调用自己
+
+      }, 1000)
+    }
+    
+  },
+  invit_pay: function (invited_id){
+    var that = this
+    var userId = wx.getStorageSync('userId');
+    var token = wx.getStorageSync('token');
+    if (invited_id == userId){
+  return;
+    }
+    wx.showLoading({
+      title: '支付中',
+    })
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/order_vip',
+      data: {
+        invited_id: invited_id,
+        userId: userId
+      },
+      header: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + token,//Bearer后面要加空格
+      },
+      method: "POST",
+      success: function (res) {
+        wx.hideLoading()
+        console.log(res);
+        if (res.data.code === 200) {
+            that.setData({
+              order:res.data.data
+            })
+            if(res.data.data.status != 1){
+              that.pay();
+            }else{
+              wx.showToast({ title: '您已为该好友助力', icon: 'none' });
+            }
+            
+        } else {
+          wx.showToast({ title: '订单创建失败', icon: 'none' });
+        }
+      }
+    })
+  },  
+
+  pay: function () {
+    var that = this
+    var order = that.data.order
+    wx.login({
+      success: res => {
+        var token = wx.getStorageSync('token')
+        wx.request({
+          url: 'https://na.bookfan.cn/api/mini/program/pay',
+          data: {
+            code: res.code,
+            title: '书友会vip助力',
+            number: order.order_number,
+            total_fee: order.price
+          },
+          header: {
+            'Accept': 'application/json',
+            'Authorization': 'Bearer ' + token,//Bearer后面要加空
+          },
+          method: "POST",
+          success: function (res) {
+            wx.requestPayment({
+              timeStamp: res.data.timeStamp,
+              nonceStr: res.data.nonceStr,
+              package: res.data.package,
+              signType: 'MD5',
+              paySign: res.data.paySign,
+              success: function (res) {
+                wx.showToast({
+                  title: '支付成功！',
+                })
+                that.updatePayStatus()
+              },
+              fail: function (res) {
+                wx.showToast({
+                  title: '取消支付！',
+                })
+                that.destroyOrder()
+              },
+              complete: function (res) {
+
+              },
+            })
+          }
+        })
+      }
+    })
+  },
+  //支付成功，更新订单支付状态
+  updatePayStatus: function () {
+    var that = this;
+    var invited_id = that.data.invited_id;
+    var userId = wx.getStorageSync('userId');
+    var token = wx.getStorageSync('token')
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/update_order',
+      data: {
+        order: that.data.order.order_number,
+        invited_id: invited_id,
+        userId: userId
+      },
+      header: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + token,//Bearer后面要加空格
+      },
+      method: "POST",
+      success: function (res) {
+        wx.navigateTo({
+          url: '/pages/index/index',
+        })
+      }
+    })
   },
 
   //  点击书友会会员跳转
@@ -115,6 +251,7 @@ Page({
   
   upper: function (e) {
     console.log(e)
+   
   },
 
   /**
@@ -122,7 +259,7 @@ Page({
    */
   onShow: function () {
     var that = this
-    that.getGroupList()
+    that.getGroupList();
   },
 
   /**

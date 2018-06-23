@@ -2,7 +2,8 @@
 App({
   onLaunch: function () {
     var that = this
-    that.checkUserInfo()
+    that.checkUserInfo();
+    
   },
 
   // 判断本地是否有token 如果没有就去后台数据检查

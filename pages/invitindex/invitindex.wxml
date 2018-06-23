@@ -16,14 +16,14 @@
   <view>
     <view style="margin:5px 18px;font-size:16px;">TA邀请的好友</view>
     <view style='margin-bottom:110rpx;'>
-      <view style='margin:12px 0 8px 18px;width:92%;height:160rpx;border-bottom:1px #ccc solid;' wx:for='{{invite_list}}' wx:key='{{item.id}}' >
-      <navigator url="/pages/invitindex/invitindex?userId={{item.user_id}}">
+      <view style='margin:12px 0 8px 18px;width:92%;height:160rpx;border-bottom:1px #ccc solid;' wx:key='aa' wx:for='{{invite_list}}'  wx:for-index="idx" wx:for-item="item" id='{{item.user_id}}'  bindtap='naviga_url' >
+      <!-- <navigator url="/pages/invitindex/invitindex?userId={{item.user_id}}"> -->
           <image src='{{item.headimgurl}}' style="margin-top:30rpx;height:110rpx;width:110rpx;float:left"/>
           <view style='float:left;padding:34rpx;font-size:16px;'>
             <view>{{item.nickname}}</view>
             <view style='color:#ccc' wx:if="{{item.province}}">浙江省杭州市</view>
           </view>
-      </navigator>
+      <!-- </navigator> -->
       </view>
       <!-- <view style='margin:12px 0 8px 18px;width:92%;height:160rpx;border-bottom:1px #ccc solid;'>
           <image src='/public/images/bookfan.png' style="margin-top:30rpx;height:110rpx;width:110rpx;float:left"/>
@@ -48,7 +48,7 @@
       </view> -->
     </view>
     <view style='margin-top: -9px;border-top: 1px #ccc solid;background-color: #fff;position:fixed;left:0;bottom:0;height:110rpx;width:100%;'>
-      <view style='text-align: center;width: 89%;background: #5bc53f;padding: 6px;margin: 2% 4%;color: #fff;'>添加好友</view>
+      <view bindtap='add_friend' style='text-align: center;width: 89%;background: #5bc53f;padding: 6px;margin: 2% 4%;color: #fff;'>添加好友</view>
     </view>
     
   </view>
