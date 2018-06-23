@@ -2,21 +2,30 @@
   <!--头像部分 -->
   <view class='top_back' style='background: url("/public/images/home_bg.png") no-repeat;'>
       <view class='head_img' >
-        <image src='/public/images/bookfan.png' style="height:188rpx;width:178rpx" />
-        <view style="padding-top:20rpx;font-size:20px;color:#333333;margin-left:50rpx;">EASON_CHAN<image src='/public/images/vip_1_5.png' style='width:60rpx;height:60rpx;margin-left:20rpx'/></view>
+        <image src='{{u_info.headimgurl}}' style="height:188rpx;width:178rpx" />
+        <view style="padding-top:20rpx;font-size:20px;color:#333333;margin-left:50rpx;">{{u_info.nickname}}<image src='/public/images/vip_1_5.png' style='width:60rpx;height:60rpx;margin-left:20rpx'/></view>
       </view>
-      <view style='text-align:center;color:#ccc;font-size:16px;'>微信号：dingke123456</view>
+      <!-- <view style='text-align:center;color:#ccc;font-size:16px;'>微信号：dingke123456</view> -->
       <view>
-        <view style='float:left;margin:30rpx 0 0 10%;color:#333333;font-size:16px;width:50%'>TA邀请好友10人</view>
+        <view style='float:left;margin:30rpx 0 0 10%;color:#333333;font-size:16px;width:50%'>TA邀请好友{{invite_number}}人</view>
         <view style='float:left;margin:30rpx 0 0 0%;color:#333333;font-size:16px;'>TA的书架10本</view>
       </view>
   </view>
 
   <!-- 邀请部分-->
   <view>
-    <view style="margin:18px 18px;font-size:16px;">TA邀请的好友</view>
+    <view style="margin:5px 18px;font-size:16px;">TA邀请的好友</view>
     <view style='margin-bottom:110rpx;'>
-      <view style='margin:12px 0 8px 18px;width:92%;height:160rpx;border-bottom:1px #ccc solid;'>
+      <view style='margin:12px 0 8px 18px;width:92%;height:160rpx;border-bottom:1px #ccc solid;' wx:for='{{invite_list}}' wx:key='{{item.id}}' >
+      <navigator url="/pages/invitindex/invitindex?userId={{item.user_id}}">
+          <image src='{{item.headimgurl}}' style="margin-top:30rpx;height:110rpx;width:110rpx;float:left"/>
+          <view style='float:left;padding:34rpx;font-size:16px;'>
+            <view>{{item.nickname}}</view>
+            <view style='color:#ccc' wx:if="{{item.province}}">浙江省杭州市</view>
+          </view>
+      </navigator>
+      </view>
+      <!-- <view style='margin:12px 0 8px 18px;width:92%;height:160rpx;border-bottom:1px #ccc solid;'>
           <image src='/public/images/bookfan.png' style="margin-top:30rpx;height:110rpx;width:110rpx;float:left"/>
           <view style='float:left;padding:34rpx;font-size:16px;'>
             <view>陈奕迅</view>
@@ -36,14 +45,7 @@
             <view>陈奕迅</view>
             <view style='color:#ccc'>浙江省杭州市</view>
           </view>
-      </view>
-      <view style='margin:12px 0 8px 18px;width:92%;height:160rpx;border-bottom:1px #ccc solid;'>
-          <image src='/public/images/bookfan.png' style="margin-top:30rpx;height:110rpx;width:110rpx;float:left"/>
-          <view style='float:left;padding:34rpx;font-size:16px;'>
-            <view>陈奕迅</view>
-            <view style='color:#ccc'>浙江省杭州市</view>
-          </view>
-      </view>
+      </view> -->
     </view>
     <view style='margin-top: -9px;border-top: 1px #ccc solid;background-color: #fff;position:fixed;left:0;bottom:0;height:110rpx;width:100%;'>
       <view style='text-align: center;width: 89%;background: #5bc53f;padding: 6px;margin: 2% 4%;color: #fff;'>添加好友</view>

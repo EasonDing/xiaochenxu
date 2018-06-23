@@ -9,6 +9,11 @@ Page({
   data: {
     isAuth: wx.getStorageSync('isAuth'),
     userInfo: [],
+    nickname:'',
+    avatarUrl:'',
+    income:'0.00',
+    invite_number:0,
+    invite_list:[]
   },
 
   /**
@@ -16,17 +21,51 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          nickname: res.userInfo.nickName,
+          avatarUrl: res.userInfo.avatarUrl,
+        })
+      },
+    })
     that.setData({
       isAuth: wx.getStorageSync('isAuth')
     })
 
-    that.getUserInfo()
+    that.getUserInfo();
+    that.getlist();
+  },
+
+  getlist:function(){
+    var that = this;
+    var userId = wx.getStorageSync('userId');
+    var token = wx.getStorageSync('token');
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/invite_user',
+      data: {
+        t_type: 'my',
+        UserId: userId
+      },
+      header: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + token,//Bearer后面要加空格
+      },
+      method: "POST",
+      success: function (res) {
+        var data = res.data.data;
+        that.setData({
+          income: data.income,
+          invite_number: data.number,
+          invite_list:data.info
+        })
+      }
+    })
   },
 
   bindphone: function () {
     var that = this
-    var token = wx.getStorageSync('token')
+    var token = wx.getStorageSync('token');
     wx.request({
       url: 'https://na.bookfan.cn/api/mini/program/user/checkBindPhone',
       header: {
