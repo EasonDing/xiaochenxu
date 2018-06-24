@@ -212,7 +212,9 @@ Page({
 
           }
         }else{
-
+          wx.navigateTo({
+            url: '/pages/bindCheck/bindCheck',
+          })
         }
        
       }
