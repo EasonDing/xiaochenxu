@@ -36,6 +36,8 @@
     "pages/address/address",
     "pages/addressEdit/addressEdit",
     "pages/bindMobile/bindMobile",
+    "pages/bindCheck/bindCheck",
+    "pages/bindWechat/bindWechat",
     "pages/bindMobileSuccess/bindMobileSuccess",
     "pages/notice/notice",
     "pages/noticeDetail/noticeDetail",
