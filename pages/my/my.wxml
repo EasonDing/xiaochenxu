@@ -55,7 +55,7 @@
         <!--收件地址 end  -->
 
 
-        <!--绑定手机号 start  -->
+        <!--关联绑定 start  -->
         <view bindtap='bindphone' class="weui-cell weui-cell_access bind_phone" hover-class="weui-cell_active">
           <view class="weui-cell__hd">
             <image src="/public/images/my/mobile.png" />
@@ -65,7 +65,7 @@
           </view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
-        <!--绑定手机号 end  -->
+        <!--关联绑定 end  -->
 
         <!--系统通知 start  -->
         <navigator url="/pages/notice/notice" class="weui-cell weui-cell_access" hover-class="weui-cell_active">

@@ -1,0 +1,18 @@
+<!--编辑地址  -->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+  <!--错误提示  -->
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopText}}</view>
+
+    <form bindsubmit='formSubmit'>
+    <view type='tel' class="weui-cells weui-cells_after-title bindPhone">
+      <view class="weui-cell weui-cell_input ">
+        <view class="weui-cell__bd ">
+          <input name='captcha' class="weui-input " placeholder="输入微信号" />
+        </view>
+      </view>
+    </view>
+    <button form-type='submit' class="weui-btn" type="primary">完成</button>
+    </form>
+  </view>
+</view>

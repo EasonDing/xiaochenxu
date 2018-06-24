@@ -1,0 +1,14 @@
+ <!--选择绑定项 start  -->
+        <navigator url="/pages/bindPhone/bindPhone?from=my" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>绑定手机号</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>
+        <navigator url="/pages/bindWechat/bindWechat" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__bd weui-cell_primary">
+            <view>填写微信号</view>
+          </view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </navigator>         
+        <!--选择绑定项 end  --> 

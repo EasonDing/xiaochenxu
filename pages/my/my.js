@@ -41,7 +41,7 @@ Page({
           })
         } else {
           wx.navigateTo({
-            url: '/pages/bindPhone/bindPhone?from=my',
+            url: '/pages/bindCheck/bindCheck?from=my',
           })
         }
       }
