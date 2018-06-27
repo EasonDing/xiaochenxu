@@ -50,14 +50,14 @@ Page({
       that.showTopTips()
       return false;
     }
-    var reg = /^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/; 
-    if (!reg.test(wechat)) {
-      that.setData({
-        showTopText: '请输入正确的微信号！'
-      })
-      that.showTopTips()
-      return false;
-    }
+    // var reg = /^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/; 
+    // if (!reg.test(wechat)) {
+    //   that.setData({
+    //     showTopText: '请输入正确的微信号！'
+    //   })
+    //   that.showTopTips()
+    //   return false;
+    // }
 
     //验证通过
     if (that.data.fromTo == 'my') {
@@ -83,6 +83,7 @@ Page({
       url: 'https://na.bookfan.cn/api/mini/program/user/bindWechat',
       data: {
         wechat: wechat,
+        userId:wx.getStorageSync('userId'),
         nickname: userInfo.nickName,
         headimgurl: userInfo.avatarUrl,
         gender: userInfo.gender,

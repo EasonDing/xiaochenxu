@@ -12,7 +12,7 @@ Page({
     interval: 5000,//自动切换时间间隔	
     duration: 1000,//滑动动画时长
     groupList: [],
-    invited_id: 3183,
+    invited_id: 0,
     order:[]
   },
   changeIndicatorDots: function (e) {
@@ -209,7 +209,9 @@ Page({
               url: '/pages/invitation/invitation',
            })
           }else{
-
+            wx.navigateTo({
+              url: '/pages/joinJuide/joinJuide',
+            })
           }
         }else{
           wx.navigateTo({
