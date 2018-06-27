@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/activation/activation",
     "pages/index/index",
     "pages/joinJuide/joinJuide",
     "pages/invitation/invitation",
@@ -21,7 +21,7 @@
     "pages/lotteryBuyBook/lotteryBuyBook",
     "pages/lotteryInviteDetail/lotteryInviteDetail",
     "pages/bindPhone/bindPhone",
-
+    
     "pages/books/books",
     "pages/bookDetail/bookDetail",
     "pages/bookForISBN/bookForISBN",

@@ -12,7 +12,7 @@ Page({
     interval: 5000,//自动切换时间间隔	
     duration: 1000,//滑动动画时长
     groupList: [],
-    invited_id: 0,
+    invited_id: '',
     order:[]
   },
   changeIndicatorDots: function (e) {
@@ -108,7 +108,7 @@ Page({
             }
             
         } else {
-          wx.showToast({ title: '订单创建失败', icon: 'none' });
+          wx.showToast({ title: res.data.message, icon: 'none' });
         }
       }
     })
