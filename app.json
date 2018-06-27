@@ -38,6 +38,7 @@
     "pages/bindMobile/bindMobile",
     "pages/bindCheck/bindCheck",
     "pages/bindWechat/bindWechat",
+    "pages/joinJuide/joinJuide",
     "pages/bindMobileSuccess/bindMobileSuccess",
     "pages/notice/notice",
     "pages/noticeDetail/noticeDetail",
