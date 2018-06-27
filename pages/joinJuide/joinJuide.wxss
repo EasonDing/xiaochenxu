@@ -5,4 +5,5 @@
 .addJoin {
   background-color: #1EC18B;
   color : white;
+  margin-bottom: 20px;
 }

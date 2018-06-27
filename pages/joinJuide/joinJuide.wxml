@@ -1,12 +1,9 @@
 <view>
 
 
-    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg"  style='width:820rpx;height:2000rpx;'>
-       <image class="weui-media-box__thumb group_logo top_image" src="{{imgUrls}}" />
-    </view>
-
-    <view class='weui-flex__item middle_box'>
-      <button class="addJoin">加入贝壳书友会</button>
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg  img-view top_image"  style='height:1500rpx;'>
+       <image class="weui-media-box__thumb group_logo " src="{{imgUrls}}" />
+       <button open-type='getUserInfo' class="addJoin" bindgetuserinfo='getUserInfo'>加入贝壳书友会</button>
     </view>
 
 </view>
