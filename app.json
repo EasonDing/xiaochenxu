@@ -2,6 +2,7 @@
   "pages": [
     
     "pages/index/index",
+    "pages/joinJuide/joinJuide",
     "pages/invitation/invitation",
     "pages/invitindex/invitindex",
     "pages/bookBar/bookBar",

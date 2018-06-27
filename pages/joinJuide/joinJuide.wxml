@@ -1,7 +1,7 @@
 <view>
 
 
-    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg"  style='width:820rpx;height:1220rpx;'>
+    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg"  style='width:820rpx;height:2000rpx;'>
        <image class="weui-media-box__thumb group_logo top_image" src="{{imgUrls}}" />
     </view>
 
