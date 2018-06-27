@@ -1,1 +1,13 @@
-/* pages/bindWechat/bindWechat.wxss */
+.weui-btn{
+  width:90%;
+  margin-top:30px;
+  background-color: #5bc53f;
+}
+.bindPhone{
+  margin-top: 16px;
+}
+
+page{
+  display:block;
+  background-color: #F8F8F8;
+}

@@ -1,1 +1,15 @@
-/* pages/bindCheck/bindCheck.wxss */
+
+page{
+  display:block;
+  background-color: #F8F8F8;
+}
+.swiper_tab{
+  margin-top: 16px;
+}
+.jump{
+  background-color: #FFFFFF;
+  color:#333333;
+}
+jump_size{
+  margin-left: 16px;
+}
