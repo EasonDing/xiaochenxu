@@ -93,6 +93,7 @@ Page({
     wx.scanCode({
       onlyFromCamera: true,
       success: (res) => {
+        console.log(res);
         wx.navigateTo({
           url: '/pages/bookForISBN/bookForISBN?isbn=' + res.result,
         })

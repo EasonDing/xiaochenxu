@@ -14,7 +14,7 @@
   <!--  活动  -->
   <view class='yi_content'>
     <view style='height:220rpx;'>
-    <navigator url='/pages/lottery/lottery' redirect hover-class="other-navigator-hover">
+    <navigator url='/pages/lottery/lottery'>
       <view class='content_1'>
           <view class='img_pic'><image class='img_class' src='/public/images/vip_1_2.png' /></view>
           <view class='yi_wenzi'>
