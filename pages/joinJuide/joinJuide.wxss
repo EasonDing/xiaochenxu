@@ -6,4 +6,8 @@
   background-color: #1EC18B;
   color : white;
   margin-bottom: 20px;
+  bottom:70px;
+  width:75%;
+  border-radius:60rpx;
+
 }

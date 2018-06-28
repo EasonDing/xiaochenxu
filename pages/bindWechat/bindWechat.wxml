@@ -5,7 +5,7 @@
     <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{showTopText}}</view>
 
     <form bindsubmit='formSubmit'>
-    <view type='tel' class="weui-cells weui-cells_after-title bindPhone">
+    <view type='tel' class=" weui-cells_after-title bindPhone">
       <view class="weui-cell weui-cell_input ">
         <view class="weui-cell__bd ">
           <input name='wechat' class="weui-input " placeholder="输入微信号" />

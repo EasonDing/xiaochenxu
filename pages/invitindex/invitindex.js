@@ -15,7 +15,10 @@ Page({
     income: '0.00',
     invite_number: 0,
     invite_list: [],
-    u_info:[]
+    u_info:[],
+    wx_account:'',
+    btnIsShow:false,
+    other_id:''
   },
 
   /**
@@ -26,11 +29,12 @@ Page({
     var userId = options.userId
     that.setData({
       isAuth: wx.getStorageSync('isAuth'),
-      
+      other_id:userId
     })
   
     that.getUserInfo();
     that.getlist(userId);
+    that.checkIsFriends(userId);
   },
 
   naviga_url: function (e) {
@@ -69,17 +73,76 @@ Page({
         that.setData({
           invite_number: data.number,
           invite_list: data.info,
-          u_info:data.u_info
+          u_info:data.u_info,
+          wx_account:data.wx_account
         })
       }
     })
   },
 
-  add_friend:function(){
-    wx.switchTab({
-      url: '/pages/bookFriends/bookFriends',
+  //检测是否为好友
+  checkIsFriends: function (otherId) {
+    var that = this
+    var userId = wx.getStorageSync('userId')
+    wx.request({
+      url: 'https://m.bookfan.cn/admin/servlet/user.php',
+      data: {
+        t: 'GetApplyInfo',
+        UserId: userId,
+        Type: 1
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        var data = res.data
+        if (data.code == 1) {
+          for (var i = 0; i < data.ApplysList.length; i++) {
+            if (data.ApplysList[i]['UserId'] == otherId) {
+              that.setData({
+                btnIsShow: true
+              })
+              return false;
+            }
+          }
+        }
+      }
     })
   },
+
+  //提交用户好友申请
+  add_friend: function () {
+    var that = this
+    var userId = wx.getStorageSync('userId')
+    wx.request({
+      url: 'https://m.bookfan.cn/admin/servlet/user.php',
+      data: {
+        t: 'AddApplyInfo',
+        UserId: userId,
+        OtherId: that.data.other_id,
+        Content: '请求加为好友',
+        Type: 1
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        var data = res.data
+        if (data.code == 1) {
+          wx.showToast({
+            title: '请求发送成功',
+          })
+        } else if (data.code == -2) {
+          wx.showToast({
+            title: '等待对方同意',
+          })
+        }
+      }
+    })
+  },
+
 
   bindphone: function () {
     var that = this

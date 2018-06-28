@@ -191,6 +191,7 @@ Page({
   is_vip:function(e){
     var that = this;
     var userId = wx.getStorageSync('userId');
+    console.log(1);
     wx.request({
       url: 'https://na.bookfan.cn/api/mini/user/check_vip',
       data: {

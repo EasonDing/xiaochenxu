@@ -5,6 +5,12 @@
 }
 .bindPhone{
   margin-top: 16px;
+  width:92%;
+  margin-left:4%;
+  background-color:#fff;
+  line-height:1.41176471;
+  font-size:17px;
+
 }
 
 page{

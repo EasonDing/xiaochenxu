@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/activation/activation",
     "pages/index/index",
+    "pages/activation/activation",
+   
     "pages/joinJuide/joinJuide",
     "pages/invitation/invitation",
     "pages/invitindex/invitindex",

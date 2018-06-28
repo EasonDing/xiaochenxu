@@ -98,8 +98,14 @@ Page({
       success: function (res) {
         if (res.data.code === 200) {
           wx.setStorageSync('userId', res.data.data.userId)
-          wx.redirectTo({
-            url: '/pages/bindMobileSuccess/bindMobileSuccess',
+          wx.showToast({
+            title: '绑定成功！',
+          })
+          // wx.redirectTo({
+          //   url: '/pages/bindMobileSuccess/bindMobileSuccess',
+          // })
+          wx.switchTab({
+            url: '/pages/my/my',
           })
         } else {
           wx.showToast({

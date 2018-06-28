@@ -35,15 +35,18 @@ Page({
       },
       method: "POST",
       success: function (res) {
-        if (res.data.code === 200) {
-          wx.navigateTo({
-            url: '/pages/bindMobileSuccess/bindMobileSuccess',
-          })
-        } else {
-          wx.navigateTo({
-            url: '/pages/bindCheck/bindCheck?from=my',
-          })
-        }
+        // if (res.data.code === 200) {
+        //   wx.navigateTo({
+        //     url: '/pages/bindMobileSuccess/bindMobileSuccess',
+        //   })
+        // } else {
+        //   wx.navigateTo({
+        //     url: '/pages/bindCheck/bindCheck?from=my',
+        //   })
+        // }
+        wx.navigateTo({
+          url: '/pages/bindCheck/bindCheck?from=my',
+        })
       }
     })
   },
