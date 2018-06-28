@@ -30,6 +30,7 @@ Page({
         t: 'GetCollectBookInfo',
         Type: '1',
         AltId: userId,
+        request_type:'xcx',
         page: 1
       },
       header: {
@@ -93,10 +94,32 @@ Page({
     wx.scanCode({
       onlyFromCamera: true,
       success: (res) => {
-        console.log(res);
-        wx.navigateTo({
-          url: '/pages/bookForISBN/bookForISBN?isbn=' + res.result,
-        })
+        that.is_activation(res.result);
+      }
+    })
+  },
+  /**判断该激活码是否已经激活 已经激活到图书详情 */
+  is_activation:function(qrcode){
+    console.log(1);return false;
+    var that = this;
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/is_activation',
+      data: {
+        qrcode: qrcode
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        if(res.data.is_activation != 1){
+          wx.navigateTo({
+            url: '/pages/activation/activation?qrcode=' + res.result,
+          })
+        }else{
+          //图书详情
+          
+        }
       }
     })
   },

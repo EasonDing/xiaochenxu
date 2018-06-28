@@ -14,7 +14,11 @@
 <view  class='grids_box'>
   <view class="weui-grids">
     <block wx:for="{{books}}" wx:key="item.id">
-      <navigator url="/pages/bookDetail/bookDetail?bookCode={{item.CODE}}&isInflow={{item.isInflow}}" class="weui-grid" hover-class="weui-grid_active">
+    <navigator wx:if="{{item.vip_id}}" url="/pages/activation/activation?id={{item.id}}" class="weui-grid" hover-class="weui-grid_active">
+        <image class="weui-grid__icon" src="{{item.Logo}}" />
+        <view class="weui-grid__label">{{item.Name}}</view>
+      </navigator>
+      <navigator wx:else url="/pages/bookDetail/bookDetail?bookCode={{item.CODE}}&isInflow={{item.isInflow}}" class="weui-grid" hover-class="weui-grid_active">
         <image class="weui-grid__icon" src="{{item.Logo}}" />
         <view class="weui-grid__label">{{item.Name}}</view>
       </navigator>

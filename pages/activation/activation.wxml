@@ -1,23 +1,24 @@
 <!--pages/activation/activation.wxml-->
 
 <view style='height:100%;background:#f8f8f8;'>
+
     <view style='background:#fff;'>
-    <view style='border-bottom:1px #eeeeee solid;height:150rpx;width:100%;'>
+    <view style='border-bottom:1px #eeeeee solid;height:140rpx;width:100%;'>
         <view>
           <view style='color:#5bc53f;margin:55rpx 0 -10rpx 55rpx;'>书名</view>
-          <view style='margin-left:55rpx'><input bindinput="phoneInputEvent" name='phone' class="weui-input " placeholder="请输入书名 " /></view>
+          <view style='margin-left:55rpx;margin-top:14rpx;'><input bindinput="bookname" type='text' name='book_name' class="weui-input " placeholder="请输入书名 " value='' /></view>
         </view>
     </view>
-    <view style='border-bottom:1px #eeeeee solid;height:150rpx;width:100%;'>
+    <view style='border-bottom:1px #eeeeee solid;height:140rpx;width:100%;'>
         <view>
           <view style='color:#5bc53f;margin:15px 0 -10rpx 27px;'>作者</view>
-          <view style='margin-left:55rpx'><input bindinput="phoneInputEvent" name='phone' class="weui-input " placeholder="请输入书名 " /></view>
+          <view style='margin-left:55rpx;margin-top:14rpx;'><input bindinput="bookauther" type='text' name='book_auther' class="weui-input " placeholder="请输入作者 " value=''/></view>
         </view>
     </view>
-    <view style='border-bottom:1px #eeeeee solid;height:150rpx;width:100%;'>
+    <view style='border-bottom:1px #eeeeee solid;height:140rpx;width:100%;'>
         <view>
           <view style='color:#5bc53f;margin:15px 0 -10rpx 27px;'>出版社</view>
-          <view style='margin-left:55rpx'><input bindinput="phoneInputEvent" name='phone' class="weui-input " placeholder="请输入书名 " /></view>
+          <view style='margin-left:55rpx;margin-top:14rpx;'><input bindinput="bookcbs" type='text' name='book_cbs' class="weui-input " placeholder="请输入出版社 " value='' /></view>
         </view>
     </view>
     <view style='border-bottom:1px #eeeeee solid;height:100rpx;width:100%;'>
@@ -26,11 +27,12 @@
     <view style='border-bottom:1px #eeeeee solid;height:280rpx;width:100%;'>
         <view>
           <view style='color:#5bc53f;margin:15px 0 -10rpx 27px;'>留言</view>
-          <view style='margin-left:55rpx'><textarea placeholder="请写下你对这本书的认识" style='width:100%;height:200rpx;display:block;position:relative;margin-top:28rpx;' /> </view>
+          <view style='margin-left:55rpx'><textarea bindblur="bindTextAreaBlur" placeholder="请写下你对这本书的认识" style='width:100%;height:200rpx;display:block;position:relative;margin-top:28rpx;' /> </view>
         </view>
     </view>
 </view>
 <view style='width:80%;margin:60rpx 0 78rpx 10%;'>
-<button style='background:#5bc53f;color:#fff;'>激活</button>
+<button style='background:#5bc53f;color:#fff;' bindtap="submit_book">激活</button>
 </view>
+
 </view>

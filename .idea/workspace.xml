@@ -4,9 +4,13 @@
     <list default="true" id="b4dab34e-5acc-4a48-ad89-abe9c9a32a74" name="Default" comment="xxx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activation/activation.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activation/activation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/activation/activation.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activation/activation.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/books/books.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/books/books.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/invitindex/invitindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/invitindex/invitindex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/invitindex/invitindex.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/invitindex/invitindex.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1120">
-              <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -29,8 +33,8 @@
       <file leaf-file-name="postings.js" pinned="false" current-in-tab="true">
         <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="203" column="10" selection-start-line="203" selection-start-column="10" selection-end-line="203" selection-end-column="58" />
+            <state relative-caret-position="632">
+              <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -70,7 +74,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -151,7 +155,8 @@
       <workItem from="1529685886001" duration="61000" />
       <workItem from="1529754025925" duration="3746000" />
       <workItem from="1529815070206" duration="603000" />
-      <workItem from="1530103941412" duration="610000" />
+      <workItem from="1530103941412" duration="1286000" />
+      <workItem from="1530189808343" duration="4402000" />
     </task>
     <task id="LOCAL-00001" summary="xxx">
       <created>1529592113223</created>
@@ -164,19 +169,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6963000" />
+    <option name="totallyTimeSpent" value="12041000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.25599128" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.25517994" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
@@ -202,6 +206,27 @@
     <option name="LAST_COMMIT_MESSAGE" value="xxx" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="31" column="82" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6464">
+          <caret line="202" column="23" lean-forward="true" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
@@ -296,7 +321,7 @@
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1120">
-          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -309,8 +334,8 @@
     </entry>
     <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="203" column="10" selection-start-line="203" selection-start-column="10" selection-end-line="203" selection-end-column="58" />
+        <state relative-caret-position="632">
+          <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
         </state>
       </provider>
     </entry>

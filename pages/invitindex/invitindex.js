@@ -18,7 +18,8 @@ Page({
     u_info:[],
     wx_account:'',
     btnIsShow:false,
-    other_id:''
+    other_id:'',
+    all_book:0
   },
 
   /**
@@ -74,7 +75,8 @@ Page({
           invite_number: data.number,
           invite_list: data.info,
           u_info:data.u_info,
-          wx_account:data.wx_account
+          wx_account:data.wx_account,
+          all_book:data.all_book
         })
       }
     })

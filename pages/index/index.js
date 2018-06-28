@@ -13,7 +13,8 @@ Page({
     duration: 1000,//滑动动画时长
     groupList: [],
     invited_id: '',
-    order:[]
+    order:[],
+    qrcode:''
   },
   changeIndicatorDots: function (e) {
     this.setData({
@@ -47,6 +48,10 @@ Page({
 
   onLoad: function (options) {
     var that = this;
+    var scene = decodeURIComponent(options.q);
+    that.setData({
+      qrcode: scene
+    })
     wx.showLoading({
       title: '加载中...',
       mask: true
@@ -60,6 +65,8 @@ Page({
     // that.login()
    
   },
+  
+
   onReady:function(){
     var that = this;
     var invited_id = that.data.invited_id;
@@ -71,8 +78,36 @@ Page({
 
       }, 1000)
     }
-    
+    var qrcode = that.data.qrcode;
+    if (qrcode != '' && qrcode != 'undefined') {
+      that.jump_url(qrcode);
+    }
   },
+
+  jump_url:function (scene) {
+    var token = wx.getStorageSync('token');
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/is_activation',
+      data: {
+        qrcode: scene,
+      },
+      header: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer ' + token,//Bearer后面要加空格
+      },
+      method: "POST",
+      success: function (res) {
+        if (res.data.code == 200) {
+          wx.navigateTo({
+            url: '/pages/activation/activation?qrcode=' + scene,
+          })
+        } else {
+
+        }
+      }
+    })
+  },
+
   invit_pay: function (invited_id){
     var that = this
     var userId = wx.getStorageSync('userId');

@@ -6,13 +6,24 @@ Page({
    */
   data: {
     pic_url:'',
+    qrcode:'',
+    book_name:'',
+    book_auther:'',
+    book_cbs:'',
+    book_liuyan:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    if (options.qrcode){
+      that.setData({
+        qrcode: options.qrcode
+      })
+      }
+   
   },
 
   /**
@@ -34,6 +45,62 @@ Page({
    */
   onHide: function () {
   
+  },
+
+  bookname: function (event){
+    var that = this;
+    that.setData({
+      book_name: event.detail.value
+    })
+    
+  },
+
+  bookcbs: function (e) {
+    var that = this;
+    this.setData({
+      book_cbs: e.detail.value
+    })
+  },
+  bookauther: function (e) {
+    var that = this;
+    this.setData({
+      book_auther: e.detail.value
+    })
+  },
+  bindTextAreaBlur: function (e) {
+    var that = this;
+    this.setData({
+      book_liuyan: e.detail.value
+    })
+  },
+
+  submit_book:function(){
+    var that = this;
+    var userId = wx.getStorageSync('userId')
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/upload_book',
+      data: {
+        book_name:that.data.book_name,
+        bookcbs: that.data.book_cbs,
+        bookauther: that.data.book_auther,
+        book_liuyan: that.data.book_liuyan,
+        pic_url: that.data.pic_url,
+        userId:userId,
+        qrcode: that.data.qrcode
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        wx.showToast({ title: res.data.message, icon: 'none' });
+        if(res.data.code == 200 ){
+          wx.navigateTo({
+            url: '/pages/index/index',
+          })
+        }
+      }
+    })
   },
 
   upload_pic:function(){

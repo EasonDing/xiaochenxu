@@ -8,7 +8,7 @@
        <view wx:if="{{wx_account}}" style='text-align:center;color:#ccc;font-size:16px;'>微信号：{{wx_account}}</view><view wx:else style='text-align:center;color:#ccc;font-size:16px;'></view> 
       <view>
         <view style='float:left;margin:30rpx 0 0 10%;color:#333333;font-size:16px;width:50%'>TA邀请好友{{invite_number}}人</view>
-        <view style='float:left;margin:30rpx 0 0 0%;color:#333333;font-size:16px;'>TA的书架10本</view>
+        <view style='float:left;margin:30rpx 0 0 0%;color:#333333;font-size:16px;'>TA的书架{{all_book}}本</view>
       </view>
   </view>
 
