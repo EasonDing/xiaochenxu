@@ -1,27 +1,30 @@
 <!--pages/vipBookDetail/vipBookDetail.wxml-->
 <view>
   <view style='height:380rpx;background:#5bc53f;text-align:center;color:#fff;'>
-    <view style='padding-top:80rpx;font-size:22px;'>《王八蛋王八蛋王八蛋王八蛋》</view>
-    <view>2001年5月12日13点14分</view>
+    <view style='padding-top:80rpx;font-size:22px;'>{{book_info.title}}</view>
+    <view>{{book_info.created_at}}</view>
   </view>
 
   <view style='text-align:center;'>
-    <image src='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4j2ZibBDpqEJhCjwy8CWoNzwmAvtl9eargkvcib09ITI6RXXD4AGf8rWmmBJQg9VXichNnysNLrMIQ/132' style='margin-top:-90rpx;height:180rpx;width:180rpx;'/>
-    <view>陈奕迅</view>
+    <image src='{{u_info.headimgurl}}' style='margin-top:-90rpx;height:180rpx;width:180rpx;'/>
+    <view>{{u_info.nickname}}</view>
   </view>
 
   <view>
-    <view style='width:90%;margin-top:20rpx;margin-left:5%;font-size:14px;color:#333333;'>“未及时的看见爱上开讲啦刷卡缴费，会计师会计打哈啥时肯定会大街上看到静安寺科技大厦框架，大大神解答上课吗，”</view>
+    <view style='width:90%;margin-top:20rpx;margin-left:5%;font-size:14px;color:#333333;text-align:center;'>“{{book_info.summary}}”</view>
   </view>
-  <view style="height:160rpx;text-align:center;background:#F8F8F8;margin-top:30rpx;">
+  <!-- <view style="height:160rpx;text-align:center;background:#F8F8F8;margin-top:30rpx;">
     <view style='width:80%;padding:30rpx 10%;'>
       <button style='background:#5bc53f;color:#fff;'>进入贝壳书友会</button>
     </view>
-  </view>
+  </view> -->
 
   <view>
     <view style='margin:20rpx;font-size:18px;color:#333333;'>书友</view>
-      <view style='float:left;margin-left:20rpx'>
+      <view wx:key='aa' wx:for='{{look_info}}'  wx:for-index="idx" wx:for-item="item" id='{{item.user_id}}' style='float:left;margin-left:20rpx'>
+          <image src='{{item.UserLogo}}' style='height:104rpx;width:104rpx;'/>
+      </view>
+      <!-- <view style='float:left;margin-left:20rpx'>
           <image src='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4j2ZibBDpqEJhCjwy8CWoNzwmAvtl9eargkvcib09ITI6RXXD4AGf8rWmmBJQg9VXichNnysNLrMIQ/132' style='height:104rpx;width:104rpx;'/>
       </view>
       <view style='float:left;margin-left:20rpx'>
@@ -41,30 +44,28 @@
       </view>
       <view style='float:left;margin-left:20rpx'>
           <image src='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4j2ZibBDpqEJhCjwy8CWoNzwmAvtl9eargkvcib09ITI6RXXD4AGf8rWmmBJQg9VXichNnysNLrMIQ/132' style='height:104rpx;width:104rpx;'/>
-      </view>
-      <view style='float:left;margin-left:20rpx'>
-          <image src='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4j2ZibBDpqEJhCjwy8CWoNzwmAvtl9eargkvcib09ITI6RXXD4AGf8rWmmBJQg9VXichNnysNLrMIQ/132' style='height:104rpx;width:104rpx;'/>
-      </view>
+      </view> -->
   </view>
   <view style='background-color: #eee;height: 20rpx;clear:both'></view>
   <view style=''>
     <view>
-      <view style='clear:both'>
+      <view style='clear:both' wx:key='aa' wx:for='{{liuyan_info}}'  wx:for-index="idx" wx:for-item="item" id='{{item.user_id}}'>
+        <image src='{{item.UserLogo}}' style='height:104rpx;width:104rpx;padding:20rpx;float:left;'/>
+        <view style='padding-top:20rpx;font-size:16px;'>{{item.username}}</view>
+        <view style='font-size:16px;'>{{item.time}}</view>
+        <view style='width:80%;clear:both;float:right;font-size:18px;margin-bottom:14rpx;margin-top:-30rpx;'>{{item.message}}</view>
+        <view style='background-color: #eee;height: 20rpx;clear:both'></view>
+      </view>
+      
+      <!-- <view style='clear:both'>
         <image src='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4j2ZibBDpqEJhCjwy8CWoNzwmAvtl9eargkvcib09ITI6RXXD4AGf8rWmmBJQg9VXichNnysNLrMIQ/132' style='height:104rpx;width:104rpx;padding:20rpx;float:left;'/>
         <view style='padding-top:20rpx;font-size:16px;'>陈奕迅</view>
         <view style='font-size:16px;'>2018.5.1 12:11:11</view>
-        <view style='width:80%;clear:both;float:right;margin:-20rpx 20rpx 0 0;font-size:18px;margin-bottom:14rpx;'>是实打实大就是大家思考和大家按时艰苦的山东黄金撒谎大家思考和</view>
-      </view>
-      <view style='background-color: #eee;height: 20rpx;clear:both'></view>
-      <view style='clear:both'>
-        <image src='https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83ep4j2ZibBDpqEJhCjwy8CWoNzwmAvtl9eargkvcib09ITI6RXXD4AGf8rWmmBJQg9VXichNnysNLrMIQ/132' style='height:104rpx;width:104rpx;padding:20rpx;float:left;'/>
-        <view style='padding-top:20rpx;font-size:16px;'>陈奕迅</view>
-        <view style='font-size:16px;'>2018.5.1 12:11:11</view>
-        <view style='width:80%;clear:both;float:right;margin:-20rpx 20rpx 0 0;font-size:18px;margin-bottom:14rpx;'>是实打实大就是大家思考和大家按时艰苦的山东黄金撒谎大家思考和</view>
-      </view>
+        <view style='width:80%;clear:both;float:right;margin:-20rpx 20rpx 0 0;font-size:18px;margin-bottom:14rpx;margin-top:-30rpx;'>是实打实大就是大家思考和大家按时艰苦的山东黄金撒谎大家思考和</view>
+      </view> -->
       <view style='background-color: #eee;height: 20rpx;clear:both'></view>
       <view style='height:110rpx;background:#eee;'>
-        <view style='width:90%;background:#fff;margin-left:5%;'><input type='text' style='width:73%;height:80rpx;margin-left:30rpx;' placeholder='请发表留言'/><span style="clear:both;float:right;margin-top:-68rpx;margin-right:20rpx;background:#eee;width:100rpx;padding-left:18rpx;">发送</span></view>
+        <view style='width:90%;background:#fff;margin-left:5%;'><input type='text' bindinput='content' style='width:73%;height:80rpx;margin-left:30rpx;' placeholder='请发表留言'/><span style="clear:both;float:right;margin-top:-68rpx;margin-right:20rpx;background:#eee;width:100rpx;padding-left:18rpx;" bindtap="send_message">发送</span></view>
         
       </view>
     </view>

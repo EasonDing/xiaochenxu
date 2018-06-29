@@ -10,7 +10,7 @@ Page({
       btn_text: '获取验证码',
       codeTime: 0,//倒计时
       wechat: '',//微信号号
-      fromTo: '', //app|invite 标记是从哪个页面来的
+      fromTo: 'my', //app|invite 标记是从哪个页面来的
     },
   },
 
@@ -19,11 +19,11 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-    if (options.from) {
-      that.setData({
-        fromTo: options.from
-      })
-    }
+    // if (options.from) {
+    //   that.setData({
+    //     fromTo: options.from
+    //   })
+    // }
   },
 
   showTopTips: function () {
@@ -60,15 +60,17 @@ Page({
     // }
 
     //验证通过
-    if (that.data.fromTo == 'my') {
-      that.bindWechat( wechat)
-    } else if (that.data.fromTo == 'updateBindWechat') {
-      that.updateBindPhone( phone)
-    }
+    // if (that.data.fromTo == 'my') {
+    //   that.bindWechat( wechat)
+    // } else if (that.data.fromTo == 'updateBindWechat') {
+    //   that.updateBindPhone( phone)
+    // }
+    that.bindWechat(wechat)
 
   },
 
   bindWechat: function (wechat) {
+    
     var that = this
     var token = wx.getStorageSync('token')
     wx.getUserInfo({
@@ -102,7 +104,7 @@ Page({
             title: '绑定成功！',
           })
           // wx.redirectTo({
-          //   url: '/pages/bindMobileSuccess/bindMobileSuccess',
+          //   url: '/pages/bindWechatSuccess/bindWechatSuccess',
           // })
           wx.switchTab({
             url: '/pages/my/my',

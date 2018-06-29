@@ -102,7 +102,10 @@ Page({
             url: '/pages/activation/activation?qrcode=' + scene,
           })
         } else {
-
+          console.log(res.data.data.id)
+          wx.navigateTo({
+            url: '/pages/vipBookDetail/vipBookDetail?id=' + res.data.data.id,
+          })
         }
       }
     })
@@ -250,8 +253,8 @@ Page({
             })
           }
         }else{
-          wx.navigateTo({
-            url: '/pages/bindCheck/bindCheck',
+          wx.showToast({
+            title: '您未关注公众号或未登录',
           })
         }
        
