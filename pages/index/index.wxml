@@ -26,7 +26,14 @@
   
       <view></view>
 
-      <view class='content_2' bindtap='is_vip'>
+      <view class='content_2' wx:if="{{disabled}}" bindtap='is_vip'>
+          <view class='img_pic' style='margin-left:20rpx;'><image class='img_class' src='/public/images/vip_1_1.png' /></view>
+          <view class='yi_wenzi'>
+              <view style='font-size:14px;margin-left:20rpx;color:#333333'>书友会会员</view>
+              <view style='font-size:12px;margin-left:20rpx;color:#ccc'>共享图书</view>
+          </view>
+      </view>
+      <view class='content_2' wx:else >
           <view class='img_pic' style='margin-left:20rpx;'><image class='img_class' src='/public/images/vip_1_1.png' /></view>
           <view class='yi_wenzi'>
               <view style='font-size:14px;margin-left:20rpx;color:#333333'>书友会会员</view>

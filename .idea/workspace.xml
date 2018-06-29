@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4dab34e-5acc-4a48-ad89-abe9c9a32a74" name="Default" comment="xxx">
+    <list default="true" id="b4dab34e-5acc-4a48-ad89-abe9c9a32a74" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.wxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.wxss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/activation/activation.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activation/activation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/activation/activation.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activation/activation.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/books/books.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/bindWechat/bindWechat.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bindWechat/bindWechat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/books/books.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/invitindex/invitindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/invitindex/invitindex.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/invitindex/invitindex.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/invitindex/invitindex.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,29 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="postings.js" pinned="false" current-in-tab="true">
-        <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="postings.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="992">
-              <caret line="31" column="82" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="82" />
+            <state>
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -74,7 +62,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -156,7 +144,8 @@
       <workItem from="1529754025925" duration="3746000" />
       <workItem from="1529815070206" duration="603000" />
       <workItem from="1530103941412" duration="1286000" />
-      <workItem from="1530189808343" duration="4402000" />
+      <workItem from="1530189808343" duration="5058000" />
+      <workItem from="1530253932232" duration="1078000" />
     </task>
     <task id="LOCAL-00001" summary="xxx">
       <created>1529592113223</created>
@@ -165,22 +154,37 @@
       <option name="project" value="LOCAL" />
       <updated>1529592113223</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="xxx">
+      <created>1530213819115</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1530213819115</updated>
+    </task>
+    <task id="LOCAL-00003" summary="xxx">
+      <created>1530254376211</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1530254376211</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12041000" />
+    <option name="totallyTimeSpent" value="13775000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27132195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.25517994" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.25517994" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
@@ -206,6 +210,27 @@
     <option name="LAST_COMMIT_MESSAGE" value="xxx" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="992">
+          <caret line="31" column="82" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6464">
+          <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1120">
@@ -318,13 +343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1120">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="992">
@@ -334,8 +352,15 @@
     </entry>
     <entry file="file://E:/QQ/851264697/FileRecv/hongniang/hongniang/zycq/pages/postings/postings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
+        <state relative-caret-position="570">
           <caret line="202" column="23" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>

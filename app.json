@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/vipBookDetail/vipBookDetail",
+
     "pages/index/index",
 
+    "pages/vipBookDetail/vipBookDetail",
+    "pages/bindWechatSuccess/bindWechatSuccess",
     "pages/activation/activation",
     "pages/joinJuide/joinJuide",
     "pages/invitation/invitation",

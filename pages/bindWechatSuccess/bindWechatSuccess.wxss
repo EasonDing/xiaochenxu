@@ -1,0 +1,31 @@
+/* pages/bindMobileSuccess/bindMobileSuccess.wxss */
+
+.page {
+  padding: 15% 15px;
+  text-align: center;
+  font-size: 13px;
+}
+.code {
+  margin-top:10%; 
+  width: 150px;
+  height: 150px;
+}
+.mobile_box {
+  color: #B6B6B6;
+}
+.mobile_box .mobile {
+  font-size: 17px;
+  color: black;
+}
+
+.edit {
+  margin-top: 20%;
+  font-size: 17px;
+  position: relative;
+}
+.edit .arrow_right {
+  width: 16px;
+  height: 17px;
+  top: 3px;
+  position: absolute
+}

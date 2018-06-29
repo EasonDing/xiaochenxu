@@ -14,7 +14,8 @@ Page({
     groupList: [],
     invited_id: '',
     order:[],
-    qrcode:''
+    qrcode:'',
+    disabled: true
   },
   changeIndicatorDots: function (e) {
     this.setData({
@@ -102,7 +103,10 @@ Page({
             url: '/pages/activation/activation?qrcode=' + scene,
           })
         } else {
-
+          console.log(res.data.data.id)
+          wx.navigateTo({
+            url: '/pages/vipBookDetail/vipBookDetail?id=' + res.data.data.id,
+          })
         }
       }
     })
@@ -225,6 +229,9 @@ Page({
   //  点击书友会会员跳转
   is_vip:function(e){
     var that = this;
+    that.setData({
+      disabled:false
+    })
     var userId = wx.getStorageSync('userId');
     console.log(1);
     wx.request({
@@ -239,6 +246,9 @@ Page({
       method: "POST",
       success: function (res) {
         //console.log(res.data.code)
+        that.setData({
+          disabled: true
+        })
         if(res.data.code == 200){
           if(res.data.data == 1){
             wx.navigateTo({
@@ -250,8 +260,8 @@ Page({
             })
           }
         }else{
-          wx.navigateTo({
-            url: '/pages/bindCheck/bindCheck',
+          wx.showToast({
+            title: '您未关注公众号或未登录',
           })
         }
        
