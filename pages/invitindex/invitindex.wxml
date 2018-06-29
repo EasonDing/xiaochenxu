@@ -48,7 +48,7 @@
       </view> -->
     </view>
     <view style='margin-top: -9px;border-top: 1px #ccc solid;background-color: #fff;position:fixed;left:0;bottom:0;height:110rpx;width:100%;'>
-      <view wx:if="{{btnIsShow}}" style='text-align: center;width: 89%;background: #5bc53f;padding: 6px;margin: 2% 4%;color: #fff;'></view>
+      <view wx:if="{{btnIsShow}}" ></view>
       <view wx:else bindtap='add_friend' style='text-align: center;width: 89%;background: #5bc53f;padding: 6px;margin: 2% 4%;color: #fff;'>添加好友</view>
     </view>
     
