@@ -72,7 +72,8 @@ Page({
   bindWechat: function (wechat) {
     
     var that = this
-    var token = wx.getStorageSync('token')
+    var token = wx.getStorageSync('token');
+    var userId = wx.getStorageSync('userId')
     wx.getUserInfo({
       withCredentials: true,
       lang: 'zh_CN',
@@ -85,7 +86,7 @@ Page({
       url: 'https://na.bookfan.cn/api/mini/program/user/bindWechat',
       data: {
         wechat: wechat,
-        userId:wx.getStorageSync('userId'),
+        userId: userId,
         nickname: userInfo.nickName,
         headimgurl: userInfo.avatarUrl,
         gender: userInfo.gender,
@@ -103,12 +104,12 @@ Page({
           wx.showToast({
             title: '绑定成功！',
           })
-          // wx.redirectTo({
-          //   url: '/pages/bindWechatSuccess/bindWechatSuccess',
-          // })
-          wx.switchTab({
-            url: '/pages/my/my',
+          wx.navigateTo({
+            url: '/pages/bindWechatSuccess/bindWechatSuccess?userid=' + userId,
           })
+          // wx.switchTab({
+          //   url: '/pages/my/my',
+          // })
         } else {
           wx.showToast({
             title: res.data.message,

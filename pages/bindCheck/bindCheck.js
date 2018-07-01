@@ -62,5 +62,61 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  check_phone_success:function()
+  {
+    var that = this
+    var userId = wx.getStorageSync('userId')
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/phone_account',
+      data: {
+       
+        UserId: userId,
+       
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        if (res.data.code == 200) {
+          wx.redirectTo({
+            url: '/pages/bindMobileSuccess/bindMobileSuccess?userid=' + userId,
+          })
+        } else {
+          wx.redirectTo({
+            url: '/pages/bindPhone/bindPhone',
+          })
+        }
+      }
+    })
+  },
+  check_weixin_success: function () {
+    var that = this
+    var userId = wx.getStorageSync('userId')
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/weixin_account',
+      data: {
+       
+        UserId: userId,
+       
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        if(res.data.code == 200){
+          wx.redirectTo({
+            url: '/pages/bindWechatSuccess/bindWechatSuccess?userid='+userId,
+          })
+        }else{
+          wx.redirectTo({
+            url: '/pages/bindWechat/bindWechat',
+          })
+        }
+      }
+    })
+  },
+
 })

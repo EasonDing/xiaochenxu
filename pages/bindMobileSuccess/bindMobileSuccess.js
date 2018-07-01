@@ -5,20 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    phone: ''
+    phone: '',
+    uid:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.bindphone()
+    this.setData({
+      uid: options.userid
+    });
+    
   },
 
   //检测是否绑定手机号
   bindphone: function () {
     var that = this
-    var userId = wx.getStorageSync('userId')
+    var uid = that.data.uid;
+    console.log(uid);
+    if (uid != '' && uid > 0) {
+      var userId = uid;
+    } else {
+      var userId = wx.getStorageSync('userId')
+    }
+    
     wx.request({
       url: 'https://m.bookfan.cn/admin/servlet/user.php',
       data: {
@@ -41,7 +52,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    this.bindphone()
   },
 
   /**

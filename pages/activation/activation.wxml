@@ -22,7 +22,7 @@
         </view>
     </view>
     <view style='border-bottom:1px #eeeeee solid;height:100rpx;width:100%;'>
-      <view style='color:#5bc53f;margin:15px 0 -10rpx 27px;'>上传封面<image src='/public/images/upload.png' style='width:40rpx;height:40rpx;float:right;margin:14rpx 70rpx 0 0;' bindtap='upload_pic'/></view>
+      <view style='color:#5bc53f;margin:15px 0 -10rpx 27px;'>上传封面<block wx:if="{{pic_url}}"><image src='http://na.bookfan.cn{{pic_url}}' style='width:90rpx;height:90rpx;margin-bottom:-33rpx;margin-left:291rpx;' /></block><image src='/public/images/upload.png' style='width:40rpx;height:40rpx;float:right;margin:14rpx 70rpx 0 0;' bindtap='upload_pic'/></view>
     </view>
     <view style='border-bottom:1px #eeeeee solid;height:280rpx;width:100%;'>
         <view>

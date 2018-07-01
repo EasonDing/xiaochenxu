@@ -66,6 +66,7 @@ Page({
     }
 
     //验证码通过
+    //console.log(that.data.fromTo);return;
     if (that.data.fromTo == 'my') {
       that.bindphone(captcha, phone)
     } else if (that.data.fromTo == 'updateBindPhone') {
@@ -76,7 +77,8 @@ Page({
 
   bindphone: function (captcha, phone) {
     var that = this
-    var token = wx.getStorageSync('token')
+    var token = wx.getStorageSync('token');
+    var userId = wx.getStorageSync('userId')
     wx.getUserInfo({
       withCredentials: true,
       lang: 'zh_CN',
@@ -105,7 +107,7 @@ Page({
         if (res.data.code === 200) {
           wx.setStorageSync('userId', res.data.data.userId)
           wx.redirectTo({
-            url: '/pages/bindMobileSuccess/bindMobileSuccess',
+            url: '/pages/bindMobileSuccess/bindMobileSuccess?userid=' + userId,
           })
         } else {
           wx.showToast({
@@ -120,6 +122,7 @@ Page({
   updateBindPhone: function (captcha, phone) {
     var that = this
     var token = wx.getStorageSync('token')
+    var userId = wx.getStorageSync('userId')
     wx.request({
       url: 'https://na.bookfan.cn/api/mini/program/user/updateBindPhone',
       data: {
@@ -134,8 +137,8 @@ Page({
       success: function (res) {
         var data = res.data
         if (data.code === 200) {
-          wx.navigateBack({
-            delta: 1,
+          wx.navigateTo({
+            url: '/pages/bindMobileSuccess/bindMobileSuccess?userid=' + userId,
           })
         } else {
           wx.showToast({

@@ -25,7 +25,7 @@
     </block>
   </view>
   <!--图书为空时  -->
-  <view class='null' hidden='{{books.length > 0}}'>
+  <view class='null' hidden='{{books}}'>
     <image class='null_img' src='/public/images/null/book_null.png'></image>
     <view class='null_text'>您还没有图书</view>
   </view>

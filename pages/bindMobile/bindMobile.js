@@ -66,7 +66,7 @@ Page({
       method: "POST",
       success: function (res) {
         wx.redirectTo({
-          url: '/pages/bindMobileSuccess/bindMobileSuccess',
+          url: '/pages/bindMobileSuccess/bindMobileSuccess?userid=' + userId,
         })
       }
     })

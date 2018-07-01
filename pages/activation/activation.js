@@ -94,9 +94,10 @@ Page({
       method: "POST",
       success: function (res) {
         wx.showToast({ title: res.data.message, icon: 'none' });
+        console.log(res.data.code)
         if(res.data.code == 200 ){
-          wx.navigateTo({
-            url: '/pages/index/index',
+          wx.switchTab({
+            url: '/pages/books/books',
           })
         }
       }
