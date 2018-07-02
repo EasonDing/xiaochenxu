@@ -101,7 +101,7 @@ Page({
   },
   /**判断该激活码是否已经激活 已经激活到图书详情 */
   is_activation:function(qrcode){
-    console.log(1);return false;
+    //console.log(1);return false;
     var that = this;
     wx.request({
       url: 'https://na.bookfan.cn/api/mini/user/is_activation',
@@ -113,13 +113,16 @@ Page({
       },
       method: "POST",
       success: function (res) {
-        if(res.data.is_activation != 1){
+        //console.log(res);return;
+        if(res.data.code == 200){
           wx.navigateTo({
             url: '/pages/activation/activation?qrcode=' + res.result,
           })
         }else{
           //图书详情
-          
+          wx.navigateTo({
+            url: '/pages/vipBookDetail/vipBookDetail?id=' + res.data.data.id,
+          })
         }
       }
     })
