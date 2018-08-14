@@ -9,7 +9,8 @@ Page({
       '/public/images/vip_juide.png',
     ],
     groupList: [],
-    order: []
+    order: [],
+    url_type:''
   },
   getUserInfo: function (res) {
       var that = this
@@ -105,9 +106,17 @@ Page({
       },
       method: "POST",
       success: function (res) {
-        wx.navigateTo({
-          url: '/pages/invitation/invitation',
-        })
+        var url_type = that.data.url_type;
+        if(url_type == 1){
+          wx.navigateTo({
+            url: '/pages/lottery/lottery',
+          })
+        }else{
+          wx.navigateTo({
+            url: '/pages/invitation/invitation',
+          })
+        }
+        
       }
     })
   },
@@ -117,9 +126,10 @@ Page({
   onLoad: function (options) {
     var that = this
     var userId = options.userId
+    var url_type = options.type
     that.setData({
       isAuth: wx.getStorageSync('isAuth'),
-
+      url_type:url_type
     })
   },
 

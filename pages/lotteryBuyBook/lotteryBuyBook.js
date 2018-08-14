@@ -87,7 +87,7 @@ Page({
         area: address.area,
         address: address.address,
         phone: address.phone,
-        price: book.price,
+        price: 0,//book.price,
         real_price: book.activity_price
       },
       header: {
@@ -102,7 +102,9 @@ Page({
           that.setData({
             order: res.data.data
           })
-          that.pay()
+          wx.navigateTo({
+            url: '/pages/lottery/lottery',
+          })
         } else {
           that.openToast('订单创建失败！')
         }

@@ -18,7 +18,7 @@
         </view>
         <view class='weui-flex footer'>
           <view>
-            <text class='book_money'>{{orderDetail.real_price}}元</text>
+            <text class='book_money'>0元</text>
           </view>
           <view>
             <text class='original_price'>原价:{{orderDetail.buy_book.price}}元</text>

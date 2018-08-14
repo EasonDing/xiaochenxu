@@ -13,11 +13,13 @@
       <view class="weui-tab__panel">
         <!--0元购书 start  -->
         <view hidden="{{activeIndex != 0}}">
-          <navigator url='/pages/lotteryBookDetail/lotteryBookDetail?bookId={{item.id}}' wx:for='{{bookList}}' wx:key='{{item.id}}' class="weui-media-box weui-media-box_appmsg">
+        <view  wx:for='{{bookList}}' wx:key='{{item.id}}' class="weui-media-box weui-media-box_appmsg">
+        
             <view class="weui-media-box__hd books_img">
               <image class="weui-media-box__thumb" src="{{item.image}}" />
             </view>
             <view class="weui-media-box__bd weui-media-box__bd_in-appmsg book_detail">
+            <navigator url='/pages/lotteryBookDetail/lotteryBookDetail?bookId={{item.id}}'>
               <view class="weui-media-box__title">
                 <text>{{item.title}}</text>
               </view>
@@ -27,21 +29,24 @@
               <view class="weui-media-box__desc introduction">
                 <text>{{item.introduction}}</text>
               </view>
+              </navigator>
               <view class='weui-flex footer'>
                 <view>
-                  <text class='book_money'>{{item.activity_price}}元</text>
+                  <text class='book_money'>0元</text>
                 </view>
                 <view>
                   <text class='original_price'>原价:{{item.price}}元</text>
                 </view>
                 <view>
                   <view class='weui-flex__item'>
-                    <button class='btn' type="primary">参加活动</button>
+                    <button class='btn' type="primary" bindtap='check_vip' id="{{item.id}}">参加活动</button>
                   </view>
                 </view>
               </view>
             </view>
-          </navigator>
+          
+        </view>
+          
         </view>
         <!--0元购书 end  -->
         <!--我的购书 start  -->
@@ -64,7 +69,7 @@
               </view>
               <view class='weui-flex footer'>
                 <view>
-                  <text class='book_money'>{{item.buy_book.activity_price}}元</text>
+                  <text class='book_money'>0元</text>
                 </view>
                 <view>
                   <text class='original_price'>原价:{{item.buy_book.price}}元</text>
@@ -88,7 +93,7 @@
             <view class='title'>活动规则</view>
             <view class='rule'>
               <view>
-                用户支付0.01元即可发起购书，可将此次购书活动专属页面分享给微信好友或朋友圈获取好友支持； 自发起购书起24小时内，获得好友支持数量（有效支持仅限贝壳书友会新用户）超过12人，购书成功；24小时内好友支持数量如未超过12人，则购书失败，本次活动结束。
+                用户不需支付即可发起购书，可将此次购书活动专属页面分享给微信好友或朋友圈获取好友支持； 自发起购书起24小时内，获得好友支持数量（有效支持仅限贝壳书友会新用户）超过12人，购书成功；24小时内好友支持数量如未超过12人，则购书失败，本次活动结束。
               </view>
             </view>
           </view>

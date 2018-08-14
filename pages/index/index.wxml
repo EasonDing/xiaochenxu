@@ -14,18 +14,7 @@
   <!--  活动  -->
   <view class='yi_content'>
     <view style='height:220rpx;'>
-    <navigator url='/pages/lottery/lottery'>
-      <view class='content_1'>
-          <view class='img_pic'><image class='img_class' src='/public/images/vip_1_2.png' /></view>
-          <view class='yi_wenzi'>
-              <view style='font-size:14px;margin-left:20rpx;color:#333333'>1分钱购书</view>
-              <view style='font-size:12px;margin-left:20rpx;color:#ccc'>邀请好友</view>
-          </view>
-      </view>
-      </navigator>
-  
-      <view></view>
-
+    
       <view class='content_2' wx:if="{{disabled}}" bindtap='is_vip'>
           <view class='img_pic' style='margin-left:20rpx;'><image class='img_class' src='/public/images/vip_1_1.png' /></view>
           <view class='yi_wenzi'>
@@ -40,6 +29,18 @@
               <view style='font-size:12px;margin-left:20rpx;color:#ccc'>共享图书</view>
           </view>
       </view>
+
+      <view></view>
+
+      <navigator url='/pages/lottery/lottery'>
+      <view class='content_1'>
+          <view class='img_pic'><image class='img_class' src='/public/images/vip_1_2.png' /></view>
+          <view class='yi_wenzi'>
+              <view style='font-size:14px;margin-left:20rpx;color:#333333'>0元购书</view>
+              <view style='font-size:12px;margin-left:20rpx;color:#ccc'>邀请好友</view>
+          </view>
+      </view>
+      </navigator>
     </view>
   </view>
   <!--我的书吧 列表  start-->

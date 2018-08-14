@@ -125,7 +125,7 @@ Page({
     }
     var userId = wx.getStorageSync('userId')
     return {
-      title: '邀请您参加“0.01元购书活动“',
+      title: '邀请您参加“0元购书活动“',
       path: '/pages/lotteryInviteDetail/lotteryInviteDetail?userId=' + userId + '&orderId=' + this.data.orderDetail.id,
       success: function (res) {
         // 转发成功

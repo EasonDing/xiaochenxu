@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4dab34e-5acc-4a48-ad89-abe9c9a32a74" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/bindWechatSuccess/bindWechatSuccess.wxss" afterDir="false" />
+    <list default="true" id="b4dab34e-5acc-4a48-ad89-abe9c9a32a74" name="Default" comment="xxx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/activation/activation.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/activation/activation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/bindWechat/bindWechat.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/bindWechat/bindWechat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/books/books.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/invitindex/invitindex.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/invitindex/invitindex.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/invitindex/invitindex.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/invitindex/invitindex.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/vipBookDetail/vipBookDetail.wxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +13,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="96">
               <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="invitindex.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/invitindex/invitindex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -62,7 +57,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -84,6 +79,18 @@
               <item name="xiaochenxu" type="b2602c69:ProjectViewProjectNode" />
               <item name="xiaochenxu" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaochenxu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaochenxu" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="activation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xiaochenxu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xiaochenxu" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="bindPhone" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xiaochenxu" type="b2602c69:ProjectViewProjectNode" />
@@ -145,7 +152,8 @@
       <workItem from="1529815070206" duration="603000" />
       <workItem from="1530103941412" duration="1286000" />
       <workItem from="1530189808343" duration="5058000" />
-      <workItem from="1530253932232" duration="1078000" />
+      <workItem from="1530253932232" duration="1834000" />
+      <workItem from="1530455047043" duration="1939000" />
     </task>
     <task id="LOCAL-00001" summary="xxx">
       <created>1529592113223</created>
@@ -168,23 +176,29 @@
       <option name="project" value="LOCAL" />
       <updated>1530254376211</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="xxx">
+      <created>1530460538574</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1530460538574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13775000" />
+    <option name="totallyTimeSpent" value="16470000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.25517994" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.25517994" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
@@ -210,6 +224,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="xxx" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/invitindex/invitindex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
@@ -359,8 +387,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="96">
           <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/invitindex/invitindex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
         </state>
       </provider>
     </entry>

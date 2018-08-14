@@ -233,7 +233,6 @@ Page({
       disabled:false
     })
     var userId = wx.getStorageSync('userId');
-    console.log(1);
     wx.request({
       url: 'https://na.bookfan.cn/api/mini/user/check_vip',
       data: {
@@ -256,7 +255,7 @@ Page({
            })
           }else{
             wx.navigateTo({
-              url: '/pages/joinJuide/joinJuide',
+              url: '/pages/joinJuide/joinJuide?type=2',
             })
           }
         }else{

@@ -193,7 +193,7 @@ Page({
     }
     var userId = wx.getStorageSync('userId')
     return {
-      title: '邀请您参加“购买书友会会员活动“',
+      title: '邀请您加入贝壳书友会',
       path: '/pages/index/index?invited_id=' + userId ,
       success: function (res) {
         // 转发成功

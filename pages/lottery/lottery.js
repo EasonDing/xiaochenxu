@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabs: ["1分购书", "我的活动", '活动规则'],
+    tabs: ["0元购书", "我的活动", '活动规则'],
     activeIndex: 0,
     sliderOffset: 0,
     sliderLeft: 0,
@@ -130,5 +130,46 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  check_vip: function (e) {
+    var id = e.target.id;
+    var that = this;
+    that.setData({
+      disabled: false
+    })
+    var userId = wx.getStorageSync('userId');
+    wx.request({
+      url: 'https://na.bookfan.cn/api/mini/user/check_vip',
+      data: {
+        t: 'GetGroupForUserId',
+        UserId: userId
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      method: "POST",
+      success: function (res) {
+        //console.log(res.data.code)
+        that.setData({
+          disabled: true
+        })
+        if (res.data.code == 200) {
+          if (res.data.data == 1) {
+            wx.navigateTo({
+              url: '/pages/lotteryBookDetail/lotteryBookDetail?bookId='+id,
+            })
+          } else {
+            wx.navigateTo({
+              url: '/pages/joinJuide/joinJuide?type=1',
+            })
+          }
+        } else {
+          wx.showToast({
+            title: '您未关注公众号或未登录',
+          })
+        }
+
+      }
+    })
+  },
 })

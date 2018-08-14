@@ -14,13 +14,13 @@
   <view class="weui-flex flex_foot">
     <view class='weui-flex__item price_box'>
       <text>价格：</text>
-      <text class='price'>{{book.activity_price}}</text>
+      <text class='price'>0元</text>
     </view>
     <!-- <navigator url='/pages/lottery/lottery'>
       <button type="primary">一元购</button>
     </navigator> -->
     <navigator url='/pages/lotteryBuyBook/lotteryBuyBook?bookId={{book.id}}'>
-      <button class='footer_btn'>一分购书</button>
+      <button class='footer_btn'>立即参与</button>
     </navigator>
   </view>
   <!--底部购买框 end  -->

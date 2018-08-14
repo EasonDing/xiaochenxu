@@ -8,7 +8,7 @@
     <view class="weui-media-box__bd weui-media-box__bd_in-appmsg book_detail">
       <view class="weui-media-box__title book_detail_top">
         <text>{{book.title}}</text>
-        <text class='price'>￥{{book.activity_price}}</text>
+        <text class='price'>￥0元</text>
       </view>
       <view class="weui-media-box__desc author">
         <text>{{book.author}}</text>
@@ -38,9 +38,9 @@
   <view class="weui-flex flex_foot">
     <view class='weui-flex__item price_box'>
       <text>价格：</text>
-      <text class='price'>{{book.activity_price}}</text>
+      <text class='price'>0元</text>
     </view>
-    <button bindtap='createOrder' class='footer_btn'>立即支付</button>
+    <button bindtap='createOrder' class='footer_btn'>立即参与</button>
   </view>
   <!--底部 end  -->
 </view>
