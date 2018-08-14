@@ -80,11 +80,11 @@ Page({
       method: "POST",
       success: function (res) {
         if (res.data.code == 200) {
-          wx.redirectTo({
+          wx.navigateTo({
             url: '/pages/bindMobileSuccess/bindMobileSuccess?userid=' + userId,
           })
         } else {
-          wx.redirectTo({
+          wx.navigateTo({
             url: '/pages/bindPhone/bindPhone',
           })
         }
@@ -107,11 +107,11 @@ Page({
       method: "POST",
       success: function (res) {
         if(res.data.code == 200){
-          wx.redirectTo({
+          wx.navigateTo({
             url: '/pages/bindWechatSuccess/bindWechatSuccess?userid='+userId,
           })
         }else{
-          wx.redirectTo({
+          wx.navigateTo({
             url: '/pages/bindWechat/bindWechat',
           })
         }

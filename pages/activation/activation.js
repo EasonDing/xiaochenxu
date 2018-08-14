@@ -99,6 +99,8 @@ Page({
           wx.switchTab({
             url: '/pages/books/books',
           })
+        }else{
+          wx.showToast({ title: res.data.message, icon: 'none' });
         }
       }
     })
